@@ -10,3 +10,11 @@
 // <<	        left shift	            5 << 1	        0101 << 1	    1010	    10
 // >>	        right shift	            5 >> 1	        0101 >> 1	    0010	    2
 // >>>	        unsigned right shift	5 >>> 1	        0101 >>> 1	    0010	    2
+
+
+
+/*
+• Bitwise AND
+• When a bitwise AND is performed on a pair of bits, it returns 1 if both bits are 1
+*/
+
