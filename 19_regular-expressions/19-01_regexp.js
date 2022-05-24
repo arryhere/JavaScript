@@ -37,20 +37,23 @@ console.log("-------------------------------------------------------------------
 */
 
 let pattern = 'arijit';
+
 let regex = new RegExp(pattern, 'gi')       // flag global and case insensitive
 
 regex = new RegExp('arijit', 'gi');
 
 regex = /arijit/gi;                         // without regexp constructor
 
+console.log(regex.source);
+
 
 console.log("---------------------------------------------------------------------------------------------------------------------------------");
 
 
 /*
-• Groups
+• Character Sets and Groups
 
-• []: A set of characters
+•   []: A set of characters
 
 •   [abc]	Any of the characters a, b, or c
     [A-Z]	Any character from uppercase A to uppercase Z
@@ -85,6 +88,7 @@ console.log("-------------------------------------------------------------------
 • x*                                    -->     Matches the preceding item "x" 0 or more times
 • x+                                    -->     Matches the preceding item "x" 1 or more times
 • x?                                    -->     Matches the preceding item "x" 0 or 1 times
+
 • x{n}                                  -->     Matches the preceding item "x" exactly "n" occurrences
 • x{n,}                                 -->     Matches the preceding item "x" at least "n" occurrences
 • x{n,m}                                -->     Matches the preceding item "x" at least "n" and at most "m" occurrences
@@ -92,8 +96,8 @@ console.log("-------------------------------------------------------------------
 • x*? x+? x?? x{n}? x{n,}? x{n,m}?      -->     By default quantifiers like * and + are "greedy", meaning that they try to match as much of the string as possible. 
                                                 The ? character after the quantifier makes the quantifier "non-greedy": meaning that it will stop as soon as it finds a match
 
-• ?=x                                   -->     Matches any string that is followed by a specific string x
-• ?!x                                   -->     Matches any string that is not followed by a specific string x
+• str(?=x)                              -->     Matches any string that is followed by a specific string "x"
+• str(?!x)                              -->     Matches any string that is not followed by a specific string "x"
 */
 
 
@@ -107,11 +111,15 @@ console.log("-------------------------------------------------------------------
 
 • ^                                     -->     Matches the beginning of input
 • $                                     -->     Matches the end of input
+
 • \b                                    -->     Matches a word boundary
                                                 This is the position where a word character is not followed or preceded by another word-character
 • \B                                    -->     Matches a non-word boundary
-• ?=x                                   -->     Matches any string that is followed by a specific string x
-• ?!x                                   -->     Matches any string that is not followed by a specific string x
+
+• x(?=y)                                -->     Lookahead assertion :           Matches "x" that is followed by "y"
+• x(?!y)                                -->     Negative lookahead assertion :  Matches "x" that is not followed by "y"
+• (?<=y)x                               -->     Lookbehind assertion :          Matches "x" only if "x" is preceded by "y"
+• (?<!y)x                               -->     Negative lookbehind assertion : Matches "x" only if "x" is not preceded by "y"
 */
 
 
@@ -120,6 +128,8 @@ console.log("-------------------------------------------------------------------
 
 /*
 • Metacharacters
+
+• .         -->     . metacharacter is matches any character, except newline or other line terminators
 
 • \w        -->     matches word characters
                     A word character is a character a-z, A-Z, 0-9, including _ (underscore)\
@@ -153,9 +163,9 @@ console.log("-------------------------------------------------------------------
 
 • \v        -->     matches vertical tab characters (tabulators)
 
-• 
-• 
-• 
+• \xxx      -->     matches the Latin character by an octal number (xxx)
+• \xdd      -->     matches Latin characters specified by a hexadecimal number (dd)
+• \udddd    -->     matches Unicode characters specified by a hexadecimal number (dddd)
 */
 
 
