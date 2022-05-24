@@ -1,25 +1,31 @@
 /*
 • JavaScript Bitwise Operators
-• Bit operators work on 32 bits numbers
-• Any numeric operand in the operation is converted into a 32 bit number
-• The result is converted back to a JavaScript number
+• avaScript stores numbers as 64 bits floating point numbers, but all bitwise operations are performed on 32 bits binary numbers
+• Before a bitwise operation is performed, JavaScript converts numbers to "32 bits signed integers"
+• After the bitwise operation is performed, the result is converted back to 64 bits JavaScript numbers
 
     Operator	Description	            Example	        Same as	        Result	    Decimal
     &	        AND	                    5 & 1	        0101 & 0001	    0001	    1
     |	        OR	                    5 | 1	        0101 | 0001	    0101	    5
-    ~	        NOT	                    ~ 5	            ~0101	        1010	    -6
+    ~	        NOT	                    ~ 5	            ~0101	        1010	    10 (*)
     ^	        XOR	                    5 ^ 1	        0101 ^ 0001	    0100	    4
     <<	        left shift	            5 << 1	        0101 << 1	    1010	    10
     >>	        right shift	            5 >> 1	        0101 >> 1	    0010	    2
     >>>	        unsigned right shift	5 >>> 1	        0101 >>> 1	    0010	    2
 
 
-• The operands are converted to 32-bit integers and expressed by a series of bits (zeroes and ones)
+• The operands are converted to 32-bit signed integers and expressed by a series of bits (zeroes and ones)
 • Numbers with more than 32 bits get their most significant bits discarded
 
     Before: 11100110111110100000000000000110000000000001
     After:              10100000000000000110000000000001
 
+• (*)   
+    The examples above uses 4 bits unsigned binary numbers. Because of this ~ 5 returns 10
+    Since JavaScript uses 32 bits signed integers, it will not return 10. It will return -6
+    00000000000000000000000000000101 (5)
+    11111111111111111111111111111010 (~5 = -6)
+    A signed integer uses the leftmost bit (MSB - Most Significant Bit) as the minus sign
 */
 
 

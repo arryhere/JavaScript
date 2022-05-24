@@ -19,6 +19,7 @@
 • str.trim()
 • str.includes()
 • str.replace()
+• str.replaceAll()
 • str.lastIndexOf()
 • str.concat()
 • str.startsWith()
@@ -168,8 +169,20 @@ console.log("-------------------------------------------------------------------
 • takes as a parameter the old substring and a new substring.
 */
 
-str = 'Hello my name is Arijit Das';
+str = 'Hello Hello my name is Arijit Das';
 console.log(str.replace("Hello", "Hola"));
+
+console.log("---------------------------------------------------------------------------------------------------------------------------------");
+
+
+/*
+• replaceAll():
+• takes as a parameter the old substring and a new substring.
+• replaces all matches
+*/
+
+str = 'Hello Hello my name is Arijit Das';
+console.log(str.replaceAll("Hello", "Hola"));
 
 console.log("---------------------------------------------------------------------------------------------------------------------------------");
 
@@ -225,7 +238,8 @@ console.log("-------------------------------------------------------------------
 
 /*
 • search:
-• it takes a substring as an argument and it returns the index of the first match. The search value can be a string or a regular expression pattern.
+• it takes a substring as an argument and it returns the index of the first match. 
+• The search value can be a string or a regular expression pattern.
 */
 
 str = 'Hello my name is Arijit Das.';
