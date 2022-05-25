@@ -25,4 +25,5 @@ Array.from(a).forEach((x)=>{
 
 console.log("---------------------------------------------------------------------------------------------------------------------------------");
 
+console.log(document.links);
 console.log(document.links[0].href);
