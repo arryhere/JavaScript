@@ -23,8 +23,8 @@ add_note_btn.addEventListener('click', function (e) {
         imp: { background: '', text: '' }
     }
 
-    if(input_title_textarea.value.length > 13){
-        obj.title = input_title_textarea.value.slice(0,13);
+    if(input_title_textarea.value.length > 30){
+        obj.title = input_title_textarea.value.slice(0,31);
     }
     else{
         obj.title = input_title_textarea.value;
@@ -58,45 +58,45 @@ function showNotes() {
         if(e.title === ''){
             e.title = 'No Title'
             html += `
-                <div class="card text-bg-light m-1 note-card ${e.imp.background} ${e.imp.text}" id="note-${i}" style="width: 18rem;">
-                    <div class="card-body">
-                            <div class="d-flex flex-row justify-content-between align-items-center">
+                    <div class="card text-bg-light m-1 note-card ${e.imp.background} ${e.imp.text}" id="note-${i}" style="width: 18rem;">
+                        <div class="card-body">
                                 <h5 class="card-title">${e.title}</h5>
-                                <button onclick="markImp(${i})" type="button" id="imp-note-${i}" class="ms-auto btn btn-dark btn-sm d-flex justify-content-center align-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="svg-imp-${i}" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </button>
-                                <button onclick="deleteNote(${i})" class="ms-2 btn btn-dark btn-sm d-flex justify-content-center align-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                    <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        <p class="card-text">${e.note}</p>
-                        
+                                <p class="card-text">${e.note}</p>
+                                <div class="d-flex flex-row justify-content-end align-items-center">
+                                    <button onclick="markImp(${i})" type="button" id="imp-note-${i}" class="me-2 btn btn-dark btn-sm d-flex justify-content-center align-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="svg-imp-${i}" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                        </svg>
+                                    </button>
+                                    <button onclick="deleteNote(${i})" class="btn btn-dark btn-sm d-flex justify-content-center align-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                        <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            
+                        </div>
                     </div>
-                </div>
-                `
+                    `
         }
         else{
             html += `
-                <div class="card text-bg-light m-1 note-card ${e.imp.background} ${e.imp.text}" id="note-${i}" style="width: 18rem;">
-                    <div class="card-body">
-                            <div class="d-flex flex-row justify-content-between align-items-center">
+                    <div class="card text-bg-light m-1 note-card ${e.imp.background} ${e.imp.text}" id="note-${i}" style="width: 18rem;">
+                        <div class="card-body">
                                 <h5 class="card-title">${e.title}</h5>
-                                <button onclick="markImp(${i})" type="button" id="imp-note-${i}" class="ms-auto btn btn-dark btn-sm d-flex justify-content-center align-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="svg-imp-${i}" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </button>
-                                <button onclick="deleteNote(${i})" class="ms-2 btn btn-dark btn-sm d-flex justify-content-center align-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                    <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        <p class="card-text">${e.note}</p>
-                        
+                                <p class="card-text">${e.note}</p>
+                                <div class="d-flex flex-row justify-content-end align-items-center">
+                                    <button onclick="markImp(${i})" type="button" id="imp-note-${i}" class="me-2 btn btn-dark btn-sm d-flex justify-content-center align-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="svg-imp-${i}" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                        </svg>
+                                    </button>
+                                    <button onclick="deleteNote(${i})" class="btn btn-dark btn-sm d-flex justify-content-center align-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                        <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            
+                        </div>
                     </div>
-                </div>
-                `
+                    `
         }
         
     });

@@ -14,12 +14,15 @@ console.log(date1.toString());
 let date2 = new Date(0);
 console.log(date2);
 
-let date3 = new Date("2029-05-30");
-console.log(date3);
+let date3 = new Date("2029-05-30 18:12:30");
+console.log(date3.toString());
 
 // let newDate = new Date(year, month, day, hours, minutes, seconds, milliseconds);
 let date4 = new Date(3000, 4, 28, 10, 30, 10, 35);
-console.log(date4);
+console.log(date4.toString());
+
+let date5 = new Date('June 13 1977');
+console.log(date5);
 
 console.log("---------------------------------------------------------------------------------------------------------------------------------");
 

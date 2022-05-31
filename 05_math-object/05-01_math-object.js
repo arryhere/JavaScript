@@ -78,7 +78,7 @@ console.log(r2);
 function randomNo(a,b){
     return (a + (b-a)*Math.random()).toPrecision(2);
 }
-console.log(randomNo(10,15));                               //10 and 15 both inclusive, !!! toprecision output string !!!
+console.log(randomNo(10,15));                               //10 and 15 both inclusive, !!! toPrecision output string !!!
 
 //proper random function
 function getRandomNo(min, max){                             //min (included) and max (excluded)
