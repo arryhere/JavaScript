@@ -22,8 +22,13 @@ add_note_btn.addEventListener('click', function (e) {
         imp: { background: '', text: '' }
     }
 
-    obj.title = input_title_textarea.value
-    obj.note = input_note_textarea.value
+    if(input_title_textarea.value.length > 13){
+        obj.title = input_title_textarea.value.slice(0,13);
+    }
+    else{
+        obj.title = input_title_textarea.value;
+    }
+    obj.note = input_note_textarea.value;
 
     if (!((input_note_textarea.value).match(/^\s*$/gi))) {
         notesArr.push(obj);
