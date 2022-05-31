@@ -1,4 +1,5 @@
-let notesArr = [];
+let notesArr = [];      // array to store our note objects and keep it in localStorage
+
 showNotes();
 
 // add notes
