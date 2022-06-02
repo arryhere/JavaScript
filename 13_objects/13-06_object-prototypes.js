@@ -1,17 +1,15 @@
 /*
 • Object Prototypes
 • All JavaScript objects inherit properties and methods from a prototype
-*/
 
-/*
-Prototype Inheritance : All JavaScript objects inherit properties and methods from a prototype:
+• Prototype Inheritance : All JavaScript objects inherit properties and methods from a prototype
 
-Date objects        inherit from    Date.prototype
-Array objects       inherit from    Array.prototype
-employee objects    inherit from    employee.prototype
+    Date objects        inherit from    Date.prototype
+    Array objects       inherit from    Array.prototype
+    employee objects    inherit from    employee.prototype
 
-The Object.prototype is on the top of the prototype inheritance chain:
-Date objects, Array objects, and employee objects inherit from Object.prototype
+• The Object.prototype is on the top of the prototype inheritance chain
+• Date objects, Array objects, and employee objects inherit from Object.prototype
 */
 
 function employee(firstname, lastname, age, id, department) {
