@@ -36,7 +36,10 @@
 }
 
 .bi-trash3-fill{
-    color: rgb(33,37,41)
+    color: rgb(33,37,41);
+}
+#trash-btn{
+    margin: 5px 10px;
 }
 
 @media screen and (min-width:992px) {

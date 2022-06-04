@@ -154,6 +154,7 @@ input_search.addEventListener('input', function () {
     Array.from(note_card).forEach((e, i, arr) => {
         const note = e.getElementsByTagName('h5')[0];
         const para = e.getElementsByTagName('p')[0];
+        console.log(para.innerHTML);
         if (para.innerText.toLowerCase().includes(input_search_value) || note.innerText.toLowerCase().includes(input_search_value)) {
             e.style.display = 'block';
         }
