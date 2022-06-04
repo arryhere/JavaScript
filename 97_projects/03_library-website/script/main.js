@@ -31,12 +31,12 @@ function libraryFormSubmit(e) {
 
     check();
     let name = document.getElementById('inputBookName').value.trim();
-    if(name.length > 30){
-        name = name.slice(0,30);
+    if (name.length > 30) {
+        name = name.slice(0, 30);
     }
     let author = document.getElementById('inputBookAuthor').value.trim();
-    if(author.length > 30){
-        author = author.slice(0,30);
+    if (author.length > 30) {
+        author = author.slice(0, 30);
     }
     let _type = Array.from(document.getElementsByClassName('form-check-input'));
     let type;
@@ -51,7 +51,26 @@ function libraryFormSubmit(e) {
     if (!(name.match(/^\s*$/gi)) && !(author.match(/^\s*$/gi)) && !(type === undefined)) {
         let book = new Book(name, author, type);
 
-        bookArr.push(book);
+        //check for similar books in library
+        if (bookArr.length === 0) {
+            bookArr.push(book);
+        }
+        else {
+            let check_match = false;
+            for (const x of bookArr) {
+                if (book.name.toLowerCase() === x.name.toLowerCase() && book.author.toLowerCase() === x.author.toLowerCase()) {
+                    check_match = true;
+                    break;
+                }
+            }
+            if (check_match === false) {
+                bookArr.push(book);
+            }
+            else {
+                window.alert('Similar Book Available')
+            }
+        }
+
         localStorage.setItem('books', JSON.stringify(bookArr))
 
         libraryForm.reset();
@@ -105,7 +124,6 @@ function Display() {
     }
     let t_body = document.getElementById('t-body');
     t_body.innerHTML = html;
-
 }
 
 //// delete book
@@ -128,7 +146,7 @@ clear_all_btn.addEventListener('click', function () {
 //// search
 
 const search_box = document.getElementById('search-box');
-search_box.addEventListener('input', function(){
+search_box.addEventListener('input', function () {
     check();
     const r_book = document.getElementsByClassName('r-book');
 
@@ -140,14 +158,11 @@ search_box.addEventListener('input', function(){
         const author = x.getElementsByTagName('td')[2].innerText.toLowerCase();
         const type = x.getElementsByTagName('td')[3].innerText.toLowerCase();
 
-        
-
-        if(num.includes(search_input_value) || name.includes(search_input_value) || author.includes(search_input_value) || type.includes(search_input_value)){
+        if (num.includes(search_input_value) || name.includes(search_input_value) || author.includes(search_input_value) || type.includes(search_input_value)) {
             x.style.display = 'table-row';
         }
-        else{
+        else {
             x.style.display = 'none';
         }
-        
     }
 })
