@@ -15,10 +15,11 @@ function check() {
 Display()
 
 //// book object constructor
-function Book(name, author, type) {
+function Book(name, author, type, count) {
     this.name = name;
     this.author = author;
     this.type = type;
+    this.count = 0;
 }
 
 //// submit to libraryForm
@@ -56,18 +57,21 @@ function libraryFormSubmit(e) {
             bookArr.push(book);
         }
         else {
+            let i = 0;
             let check_match = false;
             for (const x of bookArr) {
                 if (book.name.toLowerCase() === x.name.toLowerCase() && book.author.toLowerCase() === x.author.toLowerCase()) {
                     check_match = true;
                     break;
                 }
+                i++;
             }
             if (check_match === false) {
                 bookArr.push(book);
             }
             else {
-                window.alert('Similar Book Available')
+                bookArr[i].count++;
+                bookArr[i].type = type;
             }
         }
 
@@ -101,9 +105,9 @@ function Display() {
         for (const x of bookArr) {
             html += `
                 <tr class="r-book" id="book-${i}">
-                    <td><button onclick="deleteBook(${i})" class="btn btn-secondary btn-sm d-flex justify-content-center align-items-center" id="trash-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                    <td><div class="d-flex justify-content-center align-items-center"><button onclick="deleteBook(${i})" class="btn btn-secondary btn-sm d-flex justify-content-center align-items-center" id="trash-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
                     <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
-                    </svg></button>
+                    </svg></button><button class="btn btn-secondary d-flex justify-content-center align-items-center" id="btn-count">${x.count+1}</button></div>
                     </td>
                     <th scope="row">${i}</th>
                     <td>${x.name}</td>
@@ -130,8 +134,15 @@ function Display() {
 
 function deleteBook(i) {
     let index = i - 1;
-    bookArr.splice(index, 1);
-    localStorage.setItem('books', JSON.stringify(bookArr));
+    if (bookArr[index].count === 0) {
+        bookArr.splice(index, 1);
+        localStorage.setItem('books', JSON.stringify(bookArr));
+    }
+    else {
+        bookArr[index].count--;
+        console.log(bookArr[index].count);
+        localStorage.setItem('books', JSON.stringify(bookArr));
+    }
     Display();
 }
 
