@@ -10,12 +10,13 @@ function check() {
         bookArr = JSON.parse(localStorage.getItem('books'));
     }
 }
+check();
 
 //// run display to add books from local storage
 Display()
 
 //// book object constructor
-function Book(name, author, type, count) {
+function Book(name, author, type) {
     this.name = name;
     this.author = author;
     this.type = type;
@@ -124,14 +125,12 @@ function Display() {
                     <td class="text-center" colspan="5">...its quite empty in here. Add a book !</td>
                 </tr>
                 `
-        localStorage.clear();
     }
     let t_body = document.getElementById('t-body');
     t_body.innerHTML = html;
 }
 
 //// delete book
-
 function deleteBook(i) {
     let index = i - 1;
     if (bookArr[index].count === 0) {
@@ -149,13 +148,14 @@ function deleteBook(i) {
 //// delete all books
 const clear_all_btn = document.getElementById('clear-all-btn');
 clear_all_btn.addEventListener('click', function () {
-    localStorage.clear();
+    check();
+    bookArr.splice(0,bookArr.length);           // best performance to empty array
+    localStorage.setItem('books', JSON.stringify(bookArr))
     Display();
 
 })
 
 //// search
-
 const search_box = document.getElementById('search-box');
 search_box.addEventListener('input', function () {
     check();

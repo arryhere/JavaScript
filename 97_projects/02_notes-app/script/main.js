@@ -1,14 +1,6 @@
-let notesArr = [];      // array to store our note objects and keep it in localStorage
+let notesArr = [];                                  // array to store our note objects and keep it in localStorage
 
-showNotes();
-
-// add notes
-
-const add_note_btn = document.getElementById('add-note-btn');
-add_note_btn.addEventListener('click', function (e) {
-    const input_title_textarea = document.getElementById('input-title-textarea');
-    const input_note_textarea = document.getElementById('input-note-textarea');
-
+function check(){
     let notes = localStorage.getItem('notes');
     if (notes === null) {
         notesArr = [];
@@ -16,23 +8,34 @@ add_note_btn.addEventListener('click', function (e) {
     else {
         notesArr = JSON.parse(notes);
     }
+}
 
-    const obj = {
+showNotes();
+
+// add notes
+const add_note_btn = document.getElementById('add-note-btn');
+add_note_btn.addEventListener('click', function (e) {
+    const input_title_textarea = document.getElementById('input-title-textarea');
+    const input_note_textarea = document.getElementById('input-note-textarea');
+
+    check();
+
+    const noteObj = {
         title: '',
         note: '',
         imp: { background: '', text: '' }
     }
 
     if(input_title_textarea.value.length > 30){
-        obj.title = input_title_textarea.value.slice(0,31);
+        noteObj.title = input_title_textarea.value.slice(0,31);
     }
     else{
-        obj.title = input_title_textarea.value;
+        noteObj.title = input_title_textarea.value;
     }
-    obj.note = input_note_textarea.value;
+    noteObj.note = input_note_textarea.value;
 
     if (!((input_note_textarea.value).match(/^\s*$/gi))) {
-        notesArr.push(obj);
+        notesArr.push(noteObj);
         localStorage.setItem('notes', JSON.stringify(notesArr));
     }
 
@@ -43,15 +46,8 @@ add_note_btn.addEventListener('click', function (e) {
 })
 
 // show notes
-
 function showNotes() {
-    const notes = localStorage.getItem('notes');
-    if (notes === null) {
-        notesArr = [];
-    }
-    else {
-        notesArr = JSON.parse(notes);
-    }
+    check();
 
     let html = '';
     notesArr.forEach((e, i, arr) => {
@@ -106,7 +102,6 @@ function showNotes() {
         my_notes_div.innerHTML = html;
     }
     else {
-        localStorage.clear();
         my_notes_div.innerHTML = `
                                 <div class="text-center my-5">
                                     <p>Its quite empty in here.... Add your first note !</p>
@@ -117,7 +112,6 @@ function showNotes() {
 }
 
 // clear input field
-
 const clear_input_field = document.getElementById('clear-input-field');
 clear_input_field.addEventListener('click', function(){
     const input_title_textarea = document.getElementById('input-title-textarea');
@@ -129,15 +123,15 @@ clear_input_field.addEventListener('click', function(){
 })
 
 // clear all notes btn
-
 const clear_all_notes = document.getElementById('clear-all-notes');
 clear_all_notes.addEventListener('click', function (e) {
-    localStorage.clear();
+    check();
+    notesArr.splice(0, notesArr.length);                        // best performance to empty array
+    localStorage.setItem('notes', JSON.stringify(notesArr));
     showNotes();
 })
 
-// delete a note btn
-
+// delete single note btn
 function deleteNote(i) {
     notesArr.splice(i, 1);
     localStorage.setItem('notes', JSON.stringify(notesArr));
@@ -145,7 +139,6 @@ function deleteNote(i) {
 }
 
 // search
-
 const input_search = document.getElementById('input-search');
 input_search.addEventListener('input', function () {
     const input_search_value = input_search.value.toLowerCase();
@@ -165,17 +158,9 @@ input_search.addEventListener('input', function () {
 })
 
 // mark imp
-
 function markImp(i) {
-    const note_div = document.getElementById('note-' + i);
+    check();
 
-    let notes = localStorage.getItem('notes');
-    if (notes === null) {
-        notesArr = [];
-    }
-    else {
-        notesArr = JSON.parse(notes);
-    }
     if (notesArr[i].imp.background === '' && notesArr[i].imp.text === '') {
         notesArr[i].imp.background = 'bg-secondary';
         notesArr[i].imp.text = 'text-light';
@@ -188,7 +173,5 @@ function markImp(i) {
         localStorage.setItem('notes', JSON.stringify(notesArr));
         showNotes();
     }
-
-
 }
 
