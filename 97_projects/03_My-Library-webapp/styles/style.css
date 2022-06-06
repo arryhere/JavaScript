@@ -35,15 +35,7 @@
     box-shadow: none;
 }
 
-.bi-trash3-fill {
-    color: rgb(33, 37, 41);
-}
-
-#trash-btn {
-    margin: 5px 5px;
-}
-
-#btn-count {
+#btn-trash , #btn-count , #btn-icr {
     margin: 5px 5px;
     height: 27px;
     width: 33px;

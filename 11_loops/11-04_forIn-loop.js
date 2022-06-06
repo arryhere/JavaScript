@@ -10,6 +10,6 @@ const obj = {
     "favoutite quote" : "No amount of money, ever bought a second of time"
 }
 
-for(let x in obj){
+for(let x in obj){                      // x is string
    console.log(`${x} : ${obj[x]}`);
 }

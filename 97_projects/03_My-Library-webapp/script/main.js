@@ -106,9 +106,18 @@ function Display() {
         for (const x of bookArr) {
             html += `
                 <tr class="r-book" id="book-${i}">
-                    <td><div class="d-flex justify-content-center align-items-center"><button onclick="deleteBook(${i})" class="btn btn-secondary btn-sm d-flex justify-content-center align-items-center" id="trash-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                    <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
-                    </svg></button><button class="btn btn-secondary d-flex justify-content-center align-items-center" id="btn-count">${x.count+1}</button></div>
+                    <td>
+                        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                            <button onclick="deleteBook(${i})" class="btn btn-secondary btn-sm d-flex justify-content-center align-items-center" id="btn-trash"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+                                </svg>
+                            </button>
+                            <button class="btn btn-secondary btn-sm d-flex justify-content-center align-items-center" id="btn-count">${x.count + 1}</button>
+                            <button onclick="icrBook(${i})" class="btn btn-secondary btn-sm d-flex justify-content-center align-items-center" id="btn-icr"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                                </svg>
+                            </button>
+                        </div>
                     </td>
                     <th scope="row">${i}</th>
                     <td>${x.name}</td>
@@ -149,11 +158,19 @@ function deleteBook(i) {
 const clear_all_btn = document.getElementById('clear-all-btn');
 clear_all_btn.addEventListener('click', function () {
     check();
-    bookArr.splice(0,bookArr.length);           // best performance to empty array
+    bookArr.splice(0, bookArr.length);           // best performance to empty array
     localStorage.setItem('books', JSON.stringify(bookArr))
     Display();
-
 })
+
+//// increment book
+function icrBook(i) {
+    let index = i - 1;
+    check();
+    bookArr[index].count++;
+    localStorage.setItem('books', JSON.stringify(bookArr));
+    Display();
+}
 
 //// search
 const search_box = document.getElementById('search-box');
@@ -177,3 +194,4 @@ search_box.addEventListener('input', function () {
         }
     }
 })
+
