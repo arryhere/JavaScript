@@ -49,6 +49,16 @@ console.log(regex.source);
 
 console.log("---------------------------------------------------------------------------------------------------------------------------------");
 
+/*
+• Escaping, special characters
+
+• [ ] { } ( ) \ ^ $ . | ? * +
+• To use a special character as a regular one, prepend it with a backslash: \
+*/
+
+console.log("---------------------------------------------------------------------------------------------------------------------------------");
+
+
 
 /*
 • Character Sets and Groups

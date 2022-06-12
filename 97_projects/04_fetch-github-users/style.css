@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    margin: 0 auto;
+    padding: 10px;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    cursor: pointer;
+    width: auto;
+    height: 40px;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+}
+.btn:hover{
+    background-color: rgb(210, 203, 255);
+}
+
+img{
+    width: auto;
+    height: 80px;
+}
+
+li{
+    background-color: silver;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.user-info-div{
+    width: 50%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}

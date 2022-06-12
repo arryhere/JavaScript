@@ -1,6 +1,11 @@
 /*
 • JavaScript Promises
 
+• We can create a promise using the Promise constructor
+• It takes a callback function
+• The promise callback function has two parameters which are the resolve and reject functions
+
+
 • A Promise is a way to handle asynchronous operations in JavaScript
 • It allows handlers with an asynchronous action's eventual success value or failure reason
 • This lets asynchronous methods return values like synchronous methods
@@ -39,8 +44,8 @@ function func1() {
 
 func1().then(function (res) {
     console.log(res + ' thanks for resolving');
-}).catch(function (err) {
-    console.log(err + ' thanks for not resolving');
+}).catch(function (rej) {
+    console.log(rej + ' thanks for not resolving');
 })
 
 
