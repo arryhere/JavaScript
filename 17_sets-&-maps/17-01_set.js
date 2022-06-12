@@ -143,6 +143,8 @@ const planets = new Set(['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn
 
 iterator = planets.entries(); 
 
+console.log(iterator.next().value);
+
 for (const x of iterator) {
     console.log(x);
 }

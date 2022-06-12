@@ -1,12 +1,10 @@
-function getData() {
-    let url = './test.json';
-    fetch(url).then((response) => {
-        return response.text();         // accessing the API data as text
-    }).then((data) => {
-        console.log(data);              // getting the data
-    }).catch((error) => {
-        console.log(error);             // handling error if something wrong happens
-    })
-}
+let obj = {};
 
-getData()
+obj.a = 1;
+obj.b = 1;
+obj["c"] = 1
+
+let k1 = Symbol();
+obj[k1] = 33
+
+console.log(obj);
