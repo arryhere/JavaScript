@@ -4,9 +4,13 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+body{
+    background-color: gray
+}
 .container{
     margin: 0 auto;
     padding: 10px;
+
     background-color: gray;
     display: flex;
     flex-direction: column;
@@ -14,13 +18,21 @@
     align-items: center;
 }
 
+h1{
+    background-color: silver;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 15px;
+}
+
 .btn{
     cursor: pointer;
-    width: auto;
-    height: 40px;
-    padding: 10px;
-    border-radius: 15px;
+    width: 100px;
+    height: 45px;
+    border-radius: 10px;
     border: none;
+    margin: 0 0 15px 0px;
+    font-weight: bold;
 }
 .btn:hover{
     background-color: rgb(210, 203, 255);
@@ -29,6 +41,11 @@
 img{
     width: auto;
     height: 80px;
+}
+.img-div{
+    display: flex;
+    border-radius: 100px;
+    overflow: hidden;
 }
 
 li{
@@ -49,4 +66,7 @@ li{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+}
+p{
+    font-weight: bold;
 }

@@ -18,12 +18,12 @@ function load() {
                 html += `
                         <li class="user" id="user-${i}">
                             <div class="img-div">
-                            <img src="${x.avatar_url}" alt="avatar_url_${i}">
+                                <img src="${x.avatar_url}" alt="avatar_url_${i}">
                             </div>
                             <div class="user-info-div">
                                 <p>Name - ${x.login}</p>
                                 <p>id - ${x.id}</p>
-                                <p>node_id - ${x.node_id}e</p>
+                                <p>node_id - ${x.node_id}</p>
                             </div>
                         </li>
                         `
