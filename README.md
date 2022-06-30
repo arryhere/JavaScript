@@ -1,3 +1,2 @@
 # JavaScript
-JavaScript course\
-free to use
+free to use :)
