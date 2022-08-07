@@ -17,6 +17,22 @@ console.log(obj_1);
 
 console.log("---------------------------------------------------------------------------------------------------------------------------------");
 
+const obj_2 = {
+    name: 'Arijit',
+    age: 22,
+    human: true
+}
+
+console.log(obj_2.age);
+console.log(obj_2["name"]);
+
+obj_2.gender = 'Male';
+obj_2['height'] = 6
+
+console.log(obj_2);
+
+console.log("---------------------------------------------------------------------------------------------------------------------------------");
+
 // Creating an objecting with values + object methods
 
 const personal_info = {

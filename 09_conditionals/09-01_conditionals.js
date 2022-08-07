@@ -131,6 +131,6 @@ console.log("Ternary-Operators\n");
 
 let isRaining = true;
 
-isRaining?console.log("It's raining today") : console.log("It's not raining today")
+isRaining ? console.log("It's raining today") : console.log("It's not raining today")
 
 console.log("---------------------------------------------------------------------------------------------------------------------------------");

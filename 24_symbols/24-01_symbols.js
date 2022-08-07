@@ -64,6 +64,7 @@ const RED = Symbol('red');
 const ORANGE = Symbol('orange');
 const YELLOW = Symbol('yellow');
 const BLUE = Symbol('blue');
+// const BLUE = 'blue';
 const cat = 'blue';
 
 function getThreatLevel(color) {
@@ -77,11 +78,11 @@ function getThreatLevel(color) {
         case BLUE:
             return 'low'; 
         default:
-            console.log("I DON'T KNOW THAT COLOR!");
+            return "I DON'T KNOW THAT COLOR!";
     }
 }
 
-getThreatLevel(cat)
+console.log(getThreatLevel(cat));
 
 
 console.log("---------------------------------------------------------------------------------------------------------------------------------");

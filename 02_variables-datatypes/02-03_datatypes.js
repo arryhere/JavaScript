@@ -1,26 +1,35 @@
 /*
 • PRIMITIVE DATATYPES
+• nn bb ss u
 */
 
-//string
-let name = 'Arijit';
-console.log(name + ' ' + typeof(name));
+// null
+let _null = null;
+console.log(_null , typeof(_null));
 
-//numbers
-let age = 21;
-console.log(age + ' ' + typeof(age));
+// numbers
+let _number = 21;
+console.log(_number , typeof(_number));
 
-//boolean
-let bool = false;
-console.log(bool + ' ' + typeof(bool));
+// boolean
+let _boolean = false;        // true or false
+console.log(_boolean , typeof(_boolean));
 
-//null
-let nullVar = null;
-console.log(nullVar + ' ' + typeof(nullVar));
+// BigInt
+let _BigInt = BigInt("444");
+console.log(_BigInt , typeof(_BigInt));
 
-//undefined
-let undVar = undefined;
-console.log(undVar + ' ' + typeof(undVar));
+// string
+let _string = 'Arijit';
+console.log(_string , typeof(_string));
+
+// symbol
+let _Symbol = Symbol("symbol");
+console.log(_Symbol , typeof(_Symbol));
+
+// undefined
+let _undefined = undefined;
+console.log(_undefined , typeof(_undefined));
 
 console.log("---------------------------------------------------------------------------------------------------------------------------------");
 
@@ -28,11 +37,11 @@ console.log("-------------------------------------------------------------------
 • REFERENCE DATATYPES
 */
 
-//array
+// array
 let arr = [1,2,3,4,5,'hello',false];
 console.log(arr + ' ' + typeof(arr) + ' ' + arr[2]);
 
-//object literals
+// object literals
 let obj = {
     arijit : 'male',
     rohan : 'male',
@@ -42,13 +51,13 @@ let obj = {
 }
 console.log(obj.arijit + ' ' + typeof(obj.arijit));
 
-//functions
+// functions
 function findName() {
     
 }
 console.log(findName + ' ' + typeof(findName));
 
-//date
+// date
 let date = new Date();
 console.log(date + ' ' +typeof(date));
 
