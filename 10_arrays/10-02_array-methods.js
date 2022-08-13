@@ -24,6 +24,7 @@
 • arr.sort()
 • arr.flat()
 • Array.from()
+• delete property
 • 
 */
 
@@ -54,12 +55,13 @@ console.log(arr4);
 console.log("---------------------------------------------------------------------------------------------------------------------------------");
 
 // Concatenating array using concat
+// Returns a new array
 
 console.log("concat :\n");
 
 const arr5 = [1, 2, 3];
-const arr6 = [4, 5, 6];
-const arr7 = arr6.concat(arr5);
+const arr6 = [1, 5, 6];
+const arr7 = arr6.concat(arr5, [44, 55, 66]);
 
 console.log(arr7);
 
@@ -157,9 +159,9 @@ console.log("slice :\n");
 
 const arr15 = ['arijit', 'vivek', 'sunidhi', 'divya'];
 console.log(arr15.slice(0));
-console.log(arr15.slice(0,2));
-console.log(arr15.slice(0,99));
-console.log(arr15.slice(0,0));
+console.log(arr15.slice(0, 2));
+console.log(arr15.slice(0, 99));
+console.log(arr15.slice(0, 0));
 
 console.log(arr15);
 
@@ -170,9 +172,9 @@ console.log("-------------------------------------------------------------------
 
 console.log("splice :\n");
 
-const arr16 = [1,2,3,4,5,6];
+const arr16 = [1, 2, 3, 4, 5, 6];
 
-console.log(arr16.splice(1,1));
+console.log(arr16.splice(1, 1));
 // console.log(arr16.splice(1,2));
 // console.log(arr16.splice(1,2,44,55,66,77,88,99));
 
@@ -202,7 +204,7 @@ console.log("-------------------------------------------------------------------
 
 console.log("shift-unshift :\n");
 
-const arr18 = [1,2,3,4,5];
+const arr18 = [1, 2, 3, 4, 5];
 arr18.shift();
 arr18.shift();
 console.log(arr18);
@@ -221,26 +223,26 @@ console.log("-------------------------------------------------------------------
 
 console.log("reverse :\n");
 
-const arr19 = [1,2,3,4,5];
+const arr19 = [1, 2, 3, 4, 5];
 
 arr19.reverse();
-console.log(arr19);
+console.log(arr19);                                 // [ 5, 4, 3, 2, 1 ]
 
 arr19.reverse();
-console.log(arr19);
+console.log(arr19);                                 // [ 1, 2, 3, 4, 5 ]
 
 console.log("---------------------------------------------------------------------------------------------------------------------------------");
 
 // Sorting elements in array
-// sort: arrange array elements in ascending order. 
-// Sort takes a call back function, we will see how we use sort with a call back function in the coming sections.
+// sort: arrange array elements in ascending order alphabetically
+// Sort takes a call back function, we will see how we use sort with a call back function in the upcoming sections.
 
 console.log("sort :\n");
 
-const arr20 = [1,false,2,3,4,'rahul',5,6,7,8,9,0,10,true,'arijit'];
+const arr20 = [1, false, 2, 3, 4, 'rahul', 5, 55, 7, 745, 9, 0, 10, true, 'arijit'];
 
 arr20.sort();
-console.log(arr20);
+console.log(arr20);                                 // [0, 1, 10, 2, 3, 4, 5, 5, 7, 745, 9, 'arijit', false, 'rahul' true]
 
 console.log("---------------------------------------------------------------------------------------------------------------------------------");
 
@@ -248,21 +250,39 @@ console.log("-------------------------------------------------------------------
 // arr.flat() method was introduced in ES2019
 // It is used to flatten an array, to reduce the nesting of an array
 
+console.log("flat :\n");
+
 let arr21 = [1, [2, [3, [4, [5]]]]];
-console.log(arr21);
+console.log(arr21);                                 // [ 1, [ 2, [ 3, [Array] ] ] ]
 
 arr21 = arr21.flat(Infinity);
-console.log(arr21);
+console.log(arr21);                                 // [ 1, 2, 3, 4, 5 ]
 
 console.log("---------------------------------------------------------------------------------------------------------------------------------");
 
 // Array.from()
 // make array from any objects : set, map, iterator
 
-let set = new Set([1,2,3,4,5,5]);
-console.log(set);
+console.log("from :\n");
+
+let set = new Set([1, 2, 3, 4, 5, 5]);
+console.log(set);                                   // Set(5) { 1, 2, 3, 4, 5 }
 
 let arr22 = Array.from(set);
-console.log(arr22);
+console.log(arr22);                                 // [ 1, 2, 3, 4, 5 ]
+
+console.log("---------------------------------------------------------------------------------------------------------------------------------");
+
+// delete property
+// The JavaScript delete operator removes a property from an object
+// If no more references to the same property are held, it is eventually released automatically
+
+console.log("delete :\n");
+
+const arr23 = [1, 2, 3, 4, 5];
+console.log(arr23);                                 // [ 1, 2, 3, 4, 5 ]
+
+delete arr23[0];
+console.log(arr23);                                 // [ <1 empty item>, 2, 3, 4, 5 ]
 
 console.log("---------------------------------------------------------------------------------------------------------------------------------");
