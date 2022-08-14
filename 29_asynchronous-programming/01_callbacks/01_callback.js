@@ -6,6 +6,20 @@
 • A callback function can run after another function has finished
 */
 
+function fucn1(func) {
+    console.log('func 1');
+    func();
+}
+
+function fucn2() {
+    console.log('func 2');
+}
+
+fucn1(fucn2);
+
+
+console.log("---------------------------------------------------------------------------------------------------------------------------------");
+
 
 // Pretend that this response is coming from the server
 const students = [
@@ -37,4 +51,3 @@ function getStudents() {
 let newStudent = { name: "Sunny", subject: "Python" }
 enrollStudent(newStudent, getStudents);
 getStudents();
-

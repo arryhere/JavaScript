@@ -98,8 +98,8 @@ const arr10 = [1, 2, 3, 4, 5, 3, 1, 2];
 
 console.log(arr10.lastIndexOf(2))                   // 7
 console.log(arr10.lastIndexOf(0))                   // -1
-console.log(arr10.lastIndexOf(1))                   //  6
-console.log(arr10.lastIndexOf(4))                   //  3
+console.log(arr10.lastIndexOf(1))                   // 6
+console.log(arr10.lastIndexOf(4))                   // 3
 console.log(arr10.lastIndexOf(6))                   // -1
 
 console.log("---------------------------------------------------------------------------------------------------------------------------------");
