@@ -1,0 +1,7 @@
+{
+  "editor.tabSize": 4,
+  "editor.renderWhitespace": "trailing",
+  "editor.rulers": [
+    120
+  ]
+}

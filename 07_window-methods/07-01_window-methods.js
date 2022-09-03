@@ -10,9 +10,10 @@ alert("This is alert");
 • Window prompt() method
 • The window prompt methods display a prompt box with an input on your browser to take input values and the input data can be stored in a variable.
 • The prompt() method takes two arguments. The second argument is optional.
+• The prompt() method returns a string.
 */
 let n = prompt("Enter your name", "user");
-alert("Welcome : " + n);
+alert("Welcome : " + n + typeof n);
 
 /*
 • Window confirm() method

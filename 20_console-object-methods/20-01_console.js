@@ -6,6 +6,11 @@
 • The console method is the most popular testing and debugging tool on the browser
 */
 
+console.log(console)
+
+console.log("---------------------------------------------------------------------------------------------------------------------------------");
+
+
 /*
 • console.log()
 • We use console.log() to show output on the browser console
