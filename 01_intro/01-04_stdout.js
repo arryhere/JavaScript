@@ -1,5 +1,5 @@
-let dots = ''
-process.stdout.write(`Loading `)
+let dots = '';
+process.stdout.write(`Loading `);
 
 const load = setInterval(() => {
     dots += '.';

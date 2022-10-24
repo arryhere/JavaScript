@@ -22,7 +22,7 @@ console.log("-------------------------------------------------------------------
 • a signed integer (as per 2019 ECMA-262 specs)
 */
 
-console.log(0e-5);              
+console.log(0e-5);
 console.log(0e+5);
 console.log(5e1);
 console.log(175e-2);
@@ -40,7 +40,7 @@ console.log("-------------------------------------------------------------------
 
 let a = 6;
 let b = -6;
-console.log((a >>> 0).toString(2));         
+console.log((a >>> 0).toString(2));
 console.log((b >>> 0).toString(2));             // unsigned right shift
 
 let c = 0b11111111111111111111111111111010;     // -6
