@@ -1,2 +1,3 @@
 # JavaScript
-free to use :)
+- free to use
+- :)
