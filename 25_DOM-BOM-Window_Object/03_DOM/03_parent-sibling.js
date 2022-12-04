@@ -9,11 +9,10 @@
 
 const li_1 = document.getElementById('li-1');
 
-console.log('li-1 nextSibling', li_1.nextSibling);                   // #text ; whitespace
-console.log('li-1 previousSibling', li_1.previousSibling);           // #text ; whitespace
+console.log('li-1 nextSibling', li_1.nextSibling); // #text ; whitespace
+console.log('li-1 previousSibling', li_1.previousSibling); // #text ; whitespace
 console.log('li-1 nextElementSibling', li_1.nextElementSibling);
 console.log('li-1 previousElementSibling', li_1.previousElementSibling);
-
 
 console.log('li-1 parentElement', li_1.parentElement);
 console.log('li-1 parentNode', li_1.parentNode);

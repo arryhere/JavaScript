@@ -10,8 +10,8 @@
 
 const ul_1 = document.getElementById('ul-1');
 
-console.log('ul-1 firstChild', ul_1.firstChild);        // #text ; whitespace
-console.log('ul-1 lastChild', ul_1.lastChild);          // #text ; whitespace
+console.log('ul-1 firstChild', ul_1.firstChild); // #text ; whitespace
+console.log('ul-1 lastChild', ul_1.lastChild); // #text ; whitespace
 console.log('ul-1 childNodes', ul_1.childNodes);
 console.log('ul-1 childNodes[0]', ul_1.childNodes[0]);
 
@@ -20,4 +20,4 @@ console.log('ul-1 lastElementChild', ul_1.lastElementChild);
 console.log('ul-1 children', ul_1.children);
 console.log('ul-1 children[0]', ul_1.children[0]);
 
-console.log('ul-1 hasChildNodes', ul_1.hasChildNodes())
+console.log('ul-1 hasChildNodes', ul_1.hasChildNodes());

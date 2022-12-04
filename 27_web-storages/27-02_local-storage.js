@@ -1,4 +1,3 @@
-
 /*
 • localStorage - to display the localStorage object
 
@@ -18,17 +17,15 @@ let friends = ['Divya', 'Sunidhi', 'Haris', 'Vivek', 'Sattu'];
 localStorage.setItem('friends', JSON.stringify(friends));
 
 let employee = {
-    id: 101,
-    department: 'Computer Science',
-    code: 'wx334f'
-}
+  id: 101,
+  department: 'Computer Science',
+  code: 'wx334f',
+};
 localStorage.setItem('employee', JSON.stringify(employee));
 
 console.log(localStorage);
 
-
 console.log('------------------------------------------------------------------------------------------------------------------');
-
 
 console.log(localStorage.getItem('friends'));
 console.log(JSON.parse(localStorage.getItem('friends'))[0]);
@@ -36,27 +33,22 @@ console.log(JSON.parse(localStorage.getItem('friends'))[0]);
 console.log(localStorage.getItem('employee'));
 console.log(JSON.parse(localStorage.getItem('employee')).code);
 
-
 console.log('------------------------------------------------------------------------------------------------------------------');
-
 
 console.log(localStorage.length);
 
 console.log(localStorage.key(0));
 console.log(localStorage.key(5));
 
-
 console.log('------------------------------------------------------------------------------------------------------------------');
-
 
 localStorage.removeItem('friends');
 
 console.log(localStorage);
 
-localStorage.clear()
+localStorage.clear();
 
 console.log('------------------------------------------------------------------------------------------------------------------');
-
 
 /*
 • session storage the same methods as local storage

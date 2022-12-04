@@ -7,5 +7,4 @@
 • It is a global object
 */
 
-
-console.table(window)
+console.table(window);

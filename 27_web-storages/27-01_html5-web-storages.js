@@ -21,8 +21,6 @@
 • The keys and the values are always strings (note that, as with objects, integer keys will be automatically converted to strings)
 */
 
-
-
 /*
 • localStorage
 
@@ -31,8 +29,6 @@
 • LocalStorage is kept even between browser sessions
 • This means data is still available when the browser is closed and reopened, and also instantly between tabs and windows
 */
-
-
 
 /*
 • sessionStorage
@@ -43,20 +39,17 @@
 • Since sessionStorage and localStorage has similar methods, we will focus only on localStorage
 */
 
-
-
 /*
-• Use case of Web Storagese
+• Use case of Web Storages
 
 • store data temporarily
 • saving products that the user places in his shopping cart
 • data can be made available between page requests, multiple browser tabs, and also between browser sessions using localStorage
 • can be used offline completely using localStorage
-• Web Storage can be a great performance win when some static data is stored on the client to minimize the number of subsequent requests. Even images can be stored in strings using Base64 encoding.
+• Web Storage can be a great performance win when some static data is stored on the client to minimize the number of subsequent requests.
+    Even images can be stored in strings using Base64 encoding.
 • can be used for user authentication method
 */
-
-
 
 /*
 • 

@@ -37,14 +37,20 @@
 const bool = true;
 
 const promise_1 = new Promise((resolve, reject) => {
-    if (bool) {
-        resolve('promise resolved');
-    } else {
-        reject('promise rejected');
-    }
+  if (bool) {
+    resolve('promise resolved');
+  } else {
+    reject('promise rejected');
+  }
 });
 
 promise_1
-    .then((res) => { console.log(res); })
-    .catch((err) => { console.log(err); })
-    .finally(() => { console.log('finally'); })
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+  .finally(() => {
+    console.log('finally');
+  });
