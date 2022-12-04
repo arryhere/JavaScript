@@ -13,17 +13,21 @@
 */
 
 function employee(firstname, lastname, age, id, department) {
-    this.firstname = firstname;
-    this.lastname = lastname;
-    this.age = age;
-    this.id = id;
-    this.department = department;
-    this.country = 'India';
-    this.getInfo = () => { return `${this.firstname} ${this.lastname} ${this.age} ${this.id} ${this.department} ${this.country}` };
+  this.firstname = firstname;
+  this.lastname = lastname;
+  this.age = age;
+  this.id = id;
+  this.department = department;
+  this.country = 'India';
+  this.getInfo = () => {
+    return `${this.firstname} ${this.lastname} ${this.age} ${this.id} ${this.department} ${this.country}`;
+  };
 }
 
 employee.prototype.state = 'Delhi';
-employee.prototype.branchInfo = function () {return `${this.department} ${this.id} ${this.state}`};
+employee.prototype.branchInfo = function () {
+  return `${this.department} ${this.id} ${this.state}`;
+};
 
 const employee_a = new employee('Arijit', 'Das', 22, 101, 'Computer Science');
 const employee_b = new employee('Divya', 'Jain', 22, 102, 'Electronics');
@@ -35,6 +39,3 @@ employee_a.state = 'Mumbai';
 
 console.log(employee_a.branchInfo());
 console.log(employee_b.branchInfo());
-
-
-

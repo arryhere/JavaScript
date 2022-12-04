@@ -13,4 +13,4 @@ console.log(window.location.href);
 // window.location.href = "https://www.google.com/";
 
 console.log(history);
-history.go(-1);                                             // back button
+history.go(-1); // back button

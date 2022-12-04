@@ -6,17 +6,17 @@
 */
 
 const person = {
-    firstname: 'Arijit',
-    lastname: 'Das',
-    language: 'English',
-    gender: "",
-    get getLanguage() {
-        return person.language.toUpperCase();
-    },
-    set setGender(gen) {
-        this.gender = gen.toUpperCase();
-    }
-}
+  firstname: 'Arijit',
+  lastname: 'Das',
+  language: 'English',
+  gender: '',
+  get getLanguage() {
+    return person.language.toUpperCase();
+  },
+  set setGender(gen) {
+    this.gender = gen.toUpperCase();
+  },
+};
 
 console.log(person);
 console.log(person.getLanguage);
@@ -24,35 +24,33 @@ person.setGender = 'male';
 
 console.log(person);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 const me = {
-    firstname: 'user',
-    lastname: 'user',
-    get fullname() {
-        return `${this.firstname} ${this.lastname}`
-    },
-    set fullname(name) {
-        const n = name.split(' ');
-        if (!(n.length > 2 || n.length <= 0)) {
-            this.firstname = n[0];
-            this.lastname = n[1];
-        }
-        else {
-            this.firstname = 'user';
-            this.lastname = 'user';
-        }
-
+  firstname: 'user',
+  lastname: 'user',
+  get fullname() {
+    return `${this.firstname} ${this.lastname}`;
+  },
+  set fullname(name) {
+    const n = name.split(' ');
+    if (!(n.length > 2 || n.length <= 0)) {
+      this.firstname = n[0];
+      this.lastname = n[1];
+    } else {
+      this.firstname = 'user';
+      this.lastname = 'user';
     }
-}
+  },
+};
 
 console.log(me);
 
-me.fullname = 'Arijit Das'
+me.fullname = 'Arijit Das';
 
 console.log(me);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Why Using Getters and Setters?

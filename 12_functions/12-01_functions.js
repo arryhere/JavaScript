@@ -23,135 +23,134 @@
 • Arrow function
 */
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 // Function Declaration
 // Declaring a function without a parameter
 
 function functionName() {
-    // code goes here
+  // code goes here
 }
-functionName() // calling function by its name and with parentheses
+functionName(); // calling function by its name and with parentheses
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 // Function without a parameter and return
 // Function can be declared without a parameter
 
 function square() {
-    let num = 2;
-    let sq = num * num;
-    console.log(sq);
+  let num = 2;
+  let sq = num * num;
+  console.log(sq);
 }
-square();                              // 4
+square(); // 4
 
 function addTwoNumbers() {
-    let numOne = 10;
-    let numTwo = 20;
-    let sum = numOne + numTwo;
+  let numOne = 10;
+  let numTwo = 20;
+  let sum = numOne + numTwo;
 
-    console.log(sum)
+  console.log(sum);
 }
-addTwoNumbers()                         //30
+addTwoNumbers(); //30
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 // Function returning value
-// Function can also return values, if a function does not return values the value of the function is undefined. 
+// Function can also return values, if a function does not return values the value of the function is undefined.
 // Let us write the above functions with return. From now on, we return value to a function instead of printing it.
 
 function printFullName() {
-    let firstName = 'Arijit';
-    let lastName = 'Das';
-    let space = ' ';
-    let fullName = firstName + space + lastName;
-    return fullName;
+  let firstName = 'Arijit';
+  let lastName = 'Das';
+  let space = ' ';
+  let fullName = firstName + space + lastName;
+  return fullName;
 }
 console.log(printFullName());
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 // Function with one parameter
 
-console.log("Function with one parameter :\n");
+console.log('Function with one parameter :\n');
 
 function areaOfCircle(r) {
-    let area = Math.PI * r ** 2;                    // Exponentiation (ES2016)
-    return area;
+  let area = Math.PI * r ** 2; // Exponentiation (ES2016)
+  return area;
 }
 console.log(areaOfCircle(4));
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 // Function with two parameters
 
-console.log("Function with two parameters :\n");
+console.log('Function with two parameters :\n');
 
 function printFullName(firstName, lastName) {
-    return `${firstName} ${lastName}`;
+  return `${firstName} ${lastName}`;
 }
 console.log(printFullName('Arijit', 'Das'));
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 // Function with many parameters
 
-console.log("Function with many parameters :\n");
+console.log('Function with many parameters :\n');
 
 function sumArr(arr) {
-    let sum = 0;
-    for (x of arr) {
-        sum += x;
-    }
-    return sum;
+  let sum = 0;
+  for (x of arr) {
+    sum += x;
+  }
+  return sum;
 }
 
 console.log(sumArr(new Array(1, 2, 3, 4, 5)));
 console.log(sumArr([1, 2, 3, 4, 5, 6]));
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 // Function with unlimited number of parameters
-// A function declaration provides a function scoped 'arguments array' like object. 
+// A function declaration provides a function scoped 'arguments array' like object.
 // Any thing we passed as argument in the function can be accessed from 'arguments object' inside the functions.
 
-console.log("Function with unlimited number of parameters :\n");
-
+console.log('Function with unlimited number of parameters :\n');
 
 function sumAllNums_1() {
-    console.log(arguments);
+  console.log(arguments);
 }
 sumAllNums_1(1, 2, 3, 4);
 
-
 function sumAllNums_2() {
-    let sum = 0;
-    for(x of arguments){
-        sum += x;
-    }
-    return sum;
+  let sum = 0;
+  for (x of arguments) {
+    sum += x;
+  }
+  return sum;
 }
 console.log(sumAllNums_2(1, 2, 3, 4));
 
-function sumAllNums_3(...arr) {                     // spread operator followed by any parameter name
-    let sum = 0;
-    for(x of arr){
-        sum += x;
-    }
-    return sum;
+function sumAllNums_3(...arr) {
+  // spread operator followed by any parameter name
+  let sum = 0;
+  for (x of arr) {
+    sum += x;
+  }
+  return sum;
 }
 console.log(sumAllNums_3(1, 2, 3, 4));
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 // Function with default parameters
 
-console.log("Function with default parameters :\n");
+console.log('Function with default parameters :\n');
 
-function greet(name = "user") {
-    return `Hello ! ${name}, Hope you have a great day.`
+function greet(name = 'user') {
+  return `Hello ! ${name}, Hope you have a great day.`;
 }
 console.log(greet());
-console.log(greet("Nandini"));
+console.log(greet('Nandini'));
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');

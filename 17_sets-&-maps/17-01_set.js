@@ -18,16 +18,16 @@
     size	        Returns the number of elements in a Set
 */
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Creating an empty set
 */
 
 const myset = new Set();
-console.log(myset);             // Set(0) {}
+console.log(myset); // Set(0) {}
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Creating set from array
@@ -39,10 +39,10 @@ const setOfCountries = new Set(countries);
 console.log(setOfCountries);
 
 for (const x of setOfCountries) {
-    console.log(x);
+  console.log(x);
 }
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Adding an element to a set
@@ -52,12 +52,12 @@ const companiesArray = ['Google', 'Amazon', 'Apple', 'Nvidia', 'Microsoft'];
 const companiesSet = new Set();
 
 for (const x of companiesArray) {
-    companiesSet.add(x);
+  companiesSet.add(x);
 }
 
 console.log(companiesSet, companiesSet.size);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Deleting an element a set
@@ -73,7 +73,7 @@ friendsSet.delete('Divya');
 
 console.log(friendsSet);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Checking an element in the set
@@ -85,7 +85,7 @@ console.log(fruits);
 
 console.log(fruits.has('Apple'));
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Clearing the set
@@ -98,7 +98,7 @@ console.log(vegetables);
 vegetables.clear();
 console.log(vegetables);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • forEach()
@@ -114,24 +114,37 @@ console.log("-------------------------------------------------------------------
 const continents = new Set(['Asia', 'Africa', 'North America', 'South America', 'Antarctica', 'Europe', 'Australia']);
 
 continents.forEach((e1, e2, set) => {
-    console.log(e1);
-})
+  console.log(e1);
+});
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • values()
 • returns a new Iterator object that contains the values for each element in the Set object in insertion order
 */
 
-const zodiac = new Set(['Aquarius', 'Pisces', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn']);
+const zodiac = new Set([
+  'Aquarius',
+  'Pisces',
+  'Aries',
+  'Taurus',
+  'Gemini',
+  'Cancer',
+  'Leo',
+  'Virgo',
+  'Libra',
+  'Scorpio',
+  'Sagittarius',
+  'Capricorn',
+]);
 
 let iterator = zodiac.values();
 
 console.log(iterator.next().value);
 console.log(iterator.next().value);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • entries()
@@ -141,15 +154,15 @@ console.log("-------------------------------------------------------------------
 
 const planets = new Set(['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Pluto']);
 
-iterator = planets.entries(); 
+iterator = planets.entries();
 
 console.log(iterator.next().value);
 
 for (const x of iterator) {
-    console.log(x);
+  console.log(x);
 }
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Union of Sets
@@ -162,7 +175,7 @@ let b = [3, 4, 5, 6, 3];
 let c = Array.from(new Set(a.concat(b)));
 console.log(c);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Intersection of sets
@@ -175,13 +188,13 @@ let A = new Set(a);
 let B = new Set(b);
 
 c = a.filter((e) => {
-    return B.has(e)
-})
+  return B.has(e);
+});
 
 let C = new Set(c);
 console.log(C);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Difference of sets
@@ -195,10 +208,10 @@ A = new Set(a);
 B = new Set(b);
 
 c = a.filter((e) => {
-    return !B.has(e)
-})
+  return !B.has(e);
+});
 
 C = new Set(c);
 console.log(C);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');

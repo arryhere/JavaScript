@@ -6,14 +6,14 @@
 • 
 */
 
-let space = ' ';                                                        // an empty space string
+let space = ' '; // an empty space string
 let firstName = 'Arijit';
 let lastName = 'Das';
 let country = 'INDIA';
 let city = 'Kolkata';
 let language = 'JavaScript';
 let job = 'Developer';
-let quote = "No amount of money ever bought a second of time";
+let quote = 'No amount of money ever bought a second of time';
 let templateLiterals = `${firstName} ${lastName}`;
 
 console.log(templateLiterals);
@@ -25,10 +25,10 @@ console.log(templateLiterals);
 • 
 */
 
-let fullName = firstName + space + lastName;                            // concatenation, merging two string together.
+let fullName = firstName + space + lastName; // concatenation, merging two string together.
 console.log(fullName);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • ESCAPE SEQUENCES IN STRINGS
@@ -51,11 +51,11 @@ console.log('Day 2\t3\t5');
 console.log('Day 3\t3\t5');
 console.log('Day 4\t3\t5');
 console.log('This is a backslash  symbol (\\)'); // To write a backslash
-console.log('In every programming language it starts with \"Hello, World!\"');
-console.log("In every programming language it starts with \'Hello, World!\'");
-console.log('The saying \'Seeing is Believing\' isn\'t correct in 2020');
+console.log('In every programming language it starts with "Hello, World!"');
+console.log("In every programming language it starts with 'Hello, World!'");
+console.log("The saying 'Seeing is Believing' isn't correct in 2020");
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • TEMPLATE LITERALS (TEMPLATE STRINGS)
@@ -64,14 +64,14 @@ console.log("-------------------------------------------------------------------
 • 
 */
 
-let myInfo = `Hello, My name is ${firstName} ${lastName}.\nI am from ${city}, ${country}.\nI am a ${language} ${job}`
+let myInfo = `Hello, My name is ${firstName} ${lastName}.\nI am from ${city}, ${country}.\nI am a ${language} ${job}`;
 console.log(myInfo);
 
-// Using a string template or string interpolation method, we can add expressions, which could be a value, 
+// Using a string template or string interpolation method, we can add expressions, which could be a value,
 //     or some operations (comparison, arithmetic operations, ternary operation).
 
 let a = 2;
 let b = 3;
 console.log(`${a} is greater than ${b} : ${a > b}`);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');

@@ -5,7 +5,7 @@
 • Let us see some of the available methods.
 */
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Object.assign :
@@ -15,28 +15,28 @@ console.log("-------------------------------------------------------------------
 console.log('Object.assign() :\n');
 
 const person = {
-    firstName: 'Arijit',
-    lastName: 'Das',
-    age: 250,
-    skills: ['HTML', 'CSS', 'JS'],
-    job: 'Developer',
-    address: {
-        houseNumber: '3, Galaxy Apartments',
-        street: 'BJ Road Band Stand, Bandra West',
-        city: 'Mumbai ',
-        pinCode: 400050,
-        state: 'Maharashtra',
-        country: 'India'
-    },
-    getPersonInfo: function () {
-        return `I am ${this.firstName} ${this.lastName} and I live in ${this.address.city}, ${this.address.country}. I am ${this.age} years old.`
-    }
-}
+  firstName: 'Arijit',
+  lastName: 'Das',
+  age: 250,
+  skills: ['HTML', 'CSS', 'JS'],
+  job: 'Developer',
+  address: {
+    houseNumber: '3, Galaxy Apartments',
+    street: 'BJ Road Band Stand, Bandra West',
+    city: 'Mumbai ',
+    pinCode: 400050,
+    state: 'Maharashtra',
+    country: 'India',
+  },
+  getPersonInfo: function () {
+    return `I am ${this.firstName} ${this.lastName} and I live in ${this.address.city}, ${this.address.country}. I am ${this.age} years old.`;
+  },
+};
 
 const copyPerson = Object.assign({}, person);
 console.log(copyPerson);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Object.keys :
@@ -48,7 +48,7 @@ console.log('Object.keys() :\n');
 console.log(Object.keys(copyPerson));
 console.log(Object.keys(copyPerson.address));
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Object.values :
@@ -60,7 +60,7 @@ console.log('Object.values() :\n');
 console.log(Object.values(copyPerson));
 console.log(Object.values(copyPerson.address));
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Object.entries :
@@ -71,7 +71,7 @@ console.log('Object.entries() :\n');
 
 console.log(Object.entries(copyPerson));
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • hasOwnProperty :
@@ -80,7 +80,7 @@ console.log("-------------------------------------------------------------------
 
 console.log('Object.hasOwnProperty() :\n');
 
-console.log(copyPerson.hasOwnProperty("address"));
-console.log(copyPerson.hasOwnProperty("name"));
+console.log(copyPerson.hasOwnProperty('address'));
+console.log(copyPerson.hasOwnProperty('name'));
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');

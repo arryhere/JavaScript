@@ -17,7 +17,7 @@ const products = ['Milk', 'Coffee', 'Sugar', 'Honey', 'Apple', 'Carrot'];
 products.sort();
 console.log(products);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Sorting Numeric values
@@ -26,10 +26,12 @@ console.log("-------------------------------------------------------------------
 */
 
 const numbers = [9.81, 3.14, 100, 37];
-numbers.sort((a, b) => { return a - b });
+numbers.sort((a, b) => {
+  return a - b;
+});
 console.log(numbers);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Sorting Object Arrays
@@ -37,21 +39,26 @@ console.log("-------------------------------------------------------------------
 */
 
 const person = [
-    { name: 'Arijit', age: 22 },
-    { name: 'Divya', age: 20 },
-    { name: 'Vivek', age: 11 },
-    { name: 'Haris', age: 11 }
-]
+  { name: 'Arijit', age: 22 },
+  { name: 'Divya', age: 20 },
+  { name: 'Vivek', age: 11 },
+  { name: 'Haris', age: 11 },
+];
 
 person.sort((a, b) => {
-    if (a.age === b.age) {
-        if (a.name < b.name) {return -1;}
-        else if (a.name > b.name) {return +1;}
-        else {return 0;}
+  if (a.age === b.age) {
+    if (a.name < b.name) {
+      return -1;
+    } else if (a.name > b.name) {
+      return +1;
+    } else {
+      return 0;
     }
-    else {return a.age - b.age;}
-})
+  } else {
+    return a.age - b.age;
+  }
+});
 
 console.log(person);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');

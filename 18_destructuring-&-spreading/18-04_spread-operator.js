@@ -10,7 +10,7 @@ let [num1, num2, num3, , ...rest] = nums;
 
 console.log(num1, num2, num3, rest);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 // Spread operator to copy array
 
@@ -20,46 +20,44 @@ const evenNumbers = [...evens];
 const odds = [1, 3, 5, 7, 9];
 const oddNumbers = [...odds];
 
-const wholeNumbers = [...evens, ...odds].sort((a, b) => { return a - b });
+const wholeNumbers = [...evens, ...odds].sort((a, b) => {
+  return a - b;
+});
 
 console.log(evenNumbers);
 console.log(oddNumbers);
 console.log(wholeNumbers);
 
-
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
-
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 // Spread operator to copy object
 
 const user = {
-    name: 'Arijit',
-    title: 'Programmer',
-    country: 'India',
-    city: 'Kolkata'
-}
+  name: 'Arijit',
+  title: 'Programmer',
+  country: 'India',
+  city: 'Kolkata',
+};
 
-const copiedUser = {...user};
-const copiedUser2 = {...user, name: 'Divya', title: 'Writer'};       // Modifying or changing the object while copying
+const copiedUser = { ...user };
+const copiedUser2 = { ...user, name: 'Divya', title: 'Writer' }; // Modifying or changing the object while copying
 
 console.log(copiedUser);
 console.log(copiedUser2);
-console.log(copiedUser === user);                                   //false : own references
+console.log(copiedUser === user); //false : own references
 
-
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
-
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 // Spread operator with arrow function
 
 const sum = (...args) => {
-    let sum = 0;
-    for (const x of args) {
-        sum += x;
-    }
-    return sum;
-}
+  let sum = 0;
+  for (const x of args) {
+    sum += x;
+  }
+  return sum;
+};
 
-console.log(sum(22,22,22));
+console.log(sum(22, 22, 22));
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');

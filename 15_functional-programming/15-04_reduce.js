@@ -8,15 +8,15 @@
 • If our array is an empty array, then Javascript will throw an error
 */
 
-const numbers = [1,2,3,4,5];
+const numbers = [1, 2, 3, 4, 5];
 const sum = numbers.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue;
-},0)
+  return accumulator + currentValue;
+}, 0);
 console.log(sum);
 
 const concat = numbers.reduceRight((acc, curr) => {
-    return "" + acc + curr;
-})
+  return '' + acc + curr;
+});
 console.log(concat);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');

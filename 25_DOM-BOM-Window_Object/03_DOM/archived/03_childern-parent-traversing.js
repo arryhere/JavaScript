@@ -29,14 +29,14 @@ console.log(a.lastElementChild);
 
 console.log(a.childElementCount);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 let b = document.querySelectorAll("div .red.child")[0];
 console.log(b);
 console.log(b.childNodes);
 console.log(b.children);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 let c = document.querySelector(".container");
 console.log(c.firstElementChild.parentElement);

@@ -7,29 +7,28 @@
 */
 
 function fruit(name, price) {
-    this.name = name;
-    this.price = price;
+  this.name = name;
+  this.price = price;
 }
 
 function vegetable(name, price, taste) {
-    fruit.call(this, name, price);
-    this.taste = taste
+  fruit.call(this, name, price);
+  this.taste = taste;
 }
 
 console.log(new vegetable('cabbage', 150, 'bad'));
 
-
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
-
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 const info = {
-    getInfo: function (gender, age) {return `${this.firstName} ${this.lastName} ${gender} ${age}`}
-}
+  getInfo: function (gender, age) {
+    return `${this.firstName} ${this.lastName} ${gender} ${age}`;
+  },
+};
 const arijit = {
-    firstName: 'Arijit',
-    lastName: 'Das'
-}
+  firstName: 'Arijit',
+  lastName: 'Das',
+};
 console.log(info.getInfo.call(arijit, 'male', 22));
 
-
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');

@@ -1,14 +1,16 @@
 // making new objects using functions
 
 const makeObject = (firstname, lastname, age, id) => {
-    const obj = new Object();
-    obj.firstname = firstname;
-    obj.lastname = lastname;
-    obj.age = age;
-    obj.id = id;
-    obj.getFullName = () => {return `${obj.firstname} ${obj.lastname}`}
-    return obj;
-}
+  const obj = new Object();
+  obj.firstname = firstname;
+  obj.lastname = lastname;
+  obj.age = age;
+  obj.id = id;
+  obj.getFullName = () => {
+    return `${obj.firstname} ${obj.lastname}`;
+  };
+  return obj;
+};
 
 const a = makeObject('Arijit', 'Das', 22, 101);
 console.log(a, a.getFullName());
@@ -18,9 +20,7 @@ console.log(b, b.getFullName());
 
 console.log(a === b);
 
-
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
-
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 // Object Constructors
 
@@ -40,29 +40,31 @@ console.log("-------------------------------------------------------------------
 • this is not a variable. It is a keyword. You cannot change the value of this
 */
 
-function employee(firstname, lastname, age, id, department){
-    this.firstname = firstname;
-    this.lastname = lastname;
-    this.age = age;
-    this.id = id;
-    this.department = department;
-    this.country = 'India';
-    this.getInfo = () => {return `${this.firstname} ${this.lastname} ${this.age} ${this.id} ${this.department} ${this.country}`};
+function employee(firstname, lastname, age, id, department) {
+  this.firstname = firstname;
+  this.lastname = lastname;
+  this.age = age;
+  this.id = id;
+  this.department = department;
+  this.country = 'India';
+  this.getInfo = () => {
+    return `${this.firstname} ${this.lastname} ${this.age} ${this.id} ${this.department} ${this.country}`;
+  };
 }
 
 const employee_a = new employee('Arijit', 'Das', 22, 101, 'Computer Science');
 const employee_b = new employee('Divya', 'Jain', 22, 102, 'Electronics');
 
 employee_a.nationality = 'Indian';
-employee_a.getFullName = () => {return `${employee_a.firstname} ${employee_a.lastname}`};
+employee_a.getFullName = () => {
+  return `${employee_a.firstname} ${employee_a.lastname}`;
+};
 
 console.log(employee_a);
 console.log(employee_a.getFullName());
 console.log(employee_a.getInfo());
 
-
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
-
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 Built-in JavaScript Constructors

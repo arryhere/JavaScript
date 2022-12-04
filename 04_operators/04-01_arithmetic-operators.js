@@ -14,12 +14,12 @@
 let a = 5;
 let b = 6;
 
-let sum = a+b;
-let sub = a-b;
-let mul = a*b;
-let div = a/b;
-let powerOf = a**b;
-let mod = a%b;
+let sum = a + b;
+let sub = a - b;
+let mul = a * b;
+let div = a / b;
+let powerOf = a ** b;
+let mod = a % b;
 a = a++;
 b = b++;
 

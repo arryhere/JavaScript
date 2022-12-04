@@ -9,27 +9,29 @@
 
 // Looping over an Array
 
-console.log("Looping over an Array :\n");
+console.log('Looping over an Array :\n');
 
 const friends = ['rohan', 'vivek', 'sunidhi', 'divya'];
-for(let x of friends){
-    console.log(x);
-    x = x + ' - friends';
-    console.log(x);
+for (let x of friends) {
+  console.log(x);
+  x = x + ' - friends';
+  console.log(x);
 }
 
 console.log(friends);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 // Looping over a String
 
-console.log("Looping over a String :\n");
+console.log('Looping over a String :\n');
 
 let language = 'JavaScript';
 
-for(let x of language){
-    console.log(x);
+for (let x of language) {
+  console.log(x);
 }
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log(
+  '---------------------------------------------------------------------------------------------------------------------------------'
+);

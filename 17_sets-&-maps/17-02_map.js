@@ -38,7 +38,7 @@ Defaults	    Have default keys	Do not have default keys
 
 */
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Creating an empty Map
@@ -48,7 +48,7 @@ console.log("-------------------------------------------------------------------
 const map = new Map();
 console.log(map);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Creating an Map from array
@@ -56,15 +56,15 @@ console.log("-------------------------------------------------------------------
 */
 
 const countries = [
-    ['Finland', 'Helsinki'],
-    ['Sweden', 'Stockholm'],
-    ['Norway', 'Oslo']
-]
+  ['Finland', 'Helsinki'],
+  ['Sweden', 'Stockholm'],
+  ['Norway', 'Oslo'],
+];
 
-const countriesMap = new Map(countries);        // pass map to Array.from to get array
+const countriesMap = new Map(countries); // pass map to Array.from to get array
 console.log(countriesMap);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • set() Method
@@ -80,7 +80,7 @@ info.set('male', true);
 
 console.log(info);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • get() Method
@@ -89,7 +89,7 @@ console.log("-------------------------------------------------------------------
 
 console.log(info.get('male'));
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • size Property
@@ -98,7 +98,7 @@ console.log("-------------------------------------------------------------------
 
 console.log(info.size);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • delete() Method
@@ -107,16 +107,16 @@ console.log("-------------------------------------------------------------------
 
 const planets_moons = new Map();
 
-planets_moons.set('Mercury' , 0);
-planets_moons.set('Venus' , 0);
-planets_moons.set('Earth' , 1);
-planets_moons.set('Mars' , 2);
-planets_moons.set('Jupiter' , 79);
-planets_moons.set('Saturn' , 82);
-planets_moons.set('Uranus' , 27);
-planets_moons.set('Neptune' , 14);
+planets_moons.set('Mercury', 0);
+planets_moons.set('Venus', 0);
+planets_moons.set('Earth', 1);
+planets_moons.set('Mars', 2);
+planets_moons.set('Jupiter', 79);
+planets_moons.set('Saturn', 82);
+planets_moons.set('Uranus', 27);
+planets_moons.set('Neptune', 14);
 
-planets_moons.delete('Mercury')
+planets_moons.delete('Mercury');
 
 console.log(planets_moons);
 
@@ -124,20 +124,24 @@ planets_moons.clear();
 
 console.log(planets_moons);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • has() Method
 • The has() method returns true if a key exists in a Map
 */
 
-const couples = new Map([['Ranveer', 'Deepika'],['Ranbir', 'Alia'],['Vickey', 'Katrina']]);
+const couples = new Map([
+  ['Ranveer', 'Deepika'],
+  ['Ranbir', 'Alia'],
+  ['Vickey', 'Katrina'],
+]);
 console.log(couples);
 
 console.log(couples.has('Ranbir'));
 console.log(couples.has('Alia'));
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • Getting all values from map using loop
@@ -145,21 +149,21 @@ console.log("-------------------------------------------------------------------
 */
 
 const databaseArray = [
-    ['Arijit', 101],
-    ['Vivek', 102],
-    ['Divya', 103],
-    ['Sunidhi', 104],
-    ['Meenal', 105]
-]
+  ['Arijit', 101],
+  ['Vivek', 102],
+  ['Divya', 103],
+  ['Sunidhi', 104],
+  ['Meenal', 105],
+];
 const database = new Map(databaseArray);
 
 console.log(database);
 
 for (const [name, id] of database) {
-    console.log(name, id);
+  console.log(name, id);
 }
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • forEach()
@@ -167,44 +171,44 @@ console.log("-------------------------------------------------------------------
 • 
 */
 
-database.forEach((v,k,map) => {
-    console.log(`${v} + ${k} + ${map}`);
-})
+database.forEach((v, k, map) => {
+  console.log(`${v} + ${k} + ${map}`);
+});
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • entries()
 • Returns a new iterator object that contains the [key, value] pairs for each element in the Map object in insertion order
 */
 
-let iterator =  database.entries();
+let iterator = database.entries();
 
 console.log(iterator.next().value);
 console.log(iterator.next().value);
 console.log(iterator.next().value);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • values()
 • Returns a new iterator object that contains the values for each element in the Map object in insertion order
 */
 
-iterator =  database.values();
+iterator = database.values();
 
 console.log(iterator.next().value);
 console.log(iterator.next().value);
 console.log(iterator.next().value);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 /*
 • keys()
 • Returns a new iterator object that contains the keys for each element in the Map object in insertion order
 */
 
-iterator =  database.keys();
+iterator = database.keys();
 
 console.log(iterator.next().value);
 console.log(iterator.next().value);
@@ -213,4 +217,4 @@ console.log(iterator.next().value);
 let arr = Array.from(database.keys());
 console.log(arr);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');

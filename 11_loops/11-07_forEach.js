@@ -11,16 +11,16 @@
 • The array itself
 */
 
-const numbers = [1,2,3,4,5,6,7,8,9,10];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-numbers.forEach(function f(elements){
-    process.stdout.write(`${elements}`);
-}); 
+numbers.forEach(function f(elements) {
+  process.stdout.write(`${elements}`);
+});
 
-console.log("\n" + numbers);
+console.log('\n' + numbers);
 
-numbers.forEach(function f(elements,index, array){
-    array[index] = elements + " - update";
-})
+numbers.forEach(function f(elements, index, array) {
+  array[index] = elements + ' - update';
+});
 
-console.log("" + numbers);
+console.log('' + numbers);

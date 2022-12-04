@@ -4,7 +4,7 @@
 • It is a builtin method and it takes on argument.
 • Alert in in-browser JavaScript - Does not return anything
 */
-alert("This is alert");
+alert('This is alert');
 
 /*
 • Window prompt() method
@@ -12,8 +12,8 @@ alert("This is alert");
 • The prompt() method takes two arguments. The second argument is optional.
 • The prompt() method returns a string.
 */
-let n = prompt("Enter your name", "user");
-alert("Welcome : " + n + typeof n);
+let n = prompt('Enter your name', 'user');
+alert('Welcome : ' + n + typeof n);
 
 /*
 • Window confirm() method
@@ -21,12 +21,13 @@ alert("Welcome : " + n + typeof n);
 • A confirm box is often used to ask permission from a user to execute something.
 • Window confirm() returns boolean, takes a string as an argument. Clicking the OK yields true value, whereas clicking the Cancel button yields false value.
 */
-let m = confirm("Do you really want to leave ?");
-if(m == true){
-    alert("Bye :( " + n);
-}
-else{
-    alert("Zamn !");
+let m = confirm('Do you really want to leave ?');
+if (m == true) {
+  alert('Bye :( ' + n);
+} else {
+  alert('Zamn !');
 }
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log(
+  '---------------------------------------------------------------------------------------------------------------------------------'
+);

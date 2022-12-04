@@ -12,7 +12,7 @@
 • You can fix this by providing a compare function:
 */
 
-const arr1 = ["Banana", "Orange", "Apple", "Mango"];
+const arr1 = ['Banana', 'Orange', 'Apple', 'Mango'];
 arr1.sort();
 console.log(arr1);
 
@@ -21,16 +21,17 @@ arr2.sort();
 console.log(arr2);
 
 //custom sorting function for numbers
-arr2.sort(function compare(x, y) {        // +1 goes right , -1 goes left , 0 means equal
-    return x - y;
+arr2.sort(function compare(x, y) {
+  // +1 goes right , -1 goes left , 0 means equal
+  return x - y;
 });
 console.log(arr2);
 
 //custom sorting word length
-const arr3 = ["rameshwaram", "zi", "deep", "bhavika"];
+const arr3 = ['rameshwaram', 'zi', 'deep', 'bhavika'];
 arr3.sort(function compare(x, y) {
-    return x.length - y.length;
-})
+  return x.length - y.length;
+});
 console.log(arr3);
 
 /*
@@ -44,37 +45,41 @@ console.log(arr3);
 • The function calculates 40 - 100 (a - b), and since the result is negative (-60),  the sort function will sort 40 as a value lower than 100.
 */
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+console.log('------------------------------------------------------------------------------------------------------------------');
 
 // Sorting Object Arrays
 
 const cars = [
-    { type: "Volvo", year: 2005 }, 
-    { type: "Tesla", year: 2010 }, 
-    { type: "BMW", year: 2001 }, 
-    { type: "Ferrari", year: 1998 }
+  { type: 'Volvo', year: 2005 },
+  { type: 'Tesla', year: 2010 },
+  { type: 'BMW', year: 2001 },
+  { type: 'Ferrari', year: 1998 },
 ];
 
 cars.sort();
 console.log(cars);
 
 cars.sort(function compareYear(x, y) {
-    return x.year - y.year;
+  return x.year - y.year;
 });
 console.log(cars);
 
 cars.sort(function compareLength(x, y) {
-    return y.type.toLowerCase().length - x.type.toLowerCase().length;
-})
-console.log(cars);
-
-cars.sort(function compareAlphabet(a, b) {
-    let x = a.type.toLowerCase();
-    let y = b.type.toLowerCase();
-    if (x < y) { return -1; }
-    else if (x > y) { return 1; }
-    else { return 0; }
+  return y.type.toLowerCase().length - x.type.toLowerCase().length;
 });
 console.log(cars);
 
-console.log("---------------------------------------------------------------------------------------------------------------------------------");
+cars.sort(function compareAlphabet(a, b) {
+  let x = a.type.toLowerCase();
+  let y = b.type.toLowerCase();
+  if (x < y) {
+    return -1;
+  } else if (x > y) {
+    return 1;
+  } else {
+    return 0;
+  }
+});
+console.log(cars);
+
+console.log('------------------------------------------------------------------------------------------------------------------');
