@@ -7,7 +7,7 @@
 // *	        Multiplication
 // /	        Division
 // **	        Exponentiation (ES2016)
-// %	        Modulus (Division Remainder)
+// %	        Remainder
 // ++	        Increment
 // --	        Decrement
 
