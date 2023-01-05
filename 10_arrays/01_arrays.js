@@ -1,58 +1,52 @@
-// ARRAYS
-
 /*
-In contrast to variables, an array can store multiple values. 
-Each value in an array has an index, and each index has a reference in a memory address. 
-Each value can be accessed by using their indexes. 
-The index of an array starts from zero, and the index of the last element is less by one from the length of the array.
+• JavaScript Arrays
+• In contrast to variables, an array can store multiple values. 
+• Each value in an array has an index, and each index has a reference in a memory address. 
+• Each value can be accessed by using their index. 
+• The index of an array starts from zero, and the index of the last element is less by one from the length of the array.
 
-An array is a collection of different data types which are ordered and changeable(modifiable). 
-An array allows storing duplicate elements and different data types. 
-An array can be empty, or it may have different data type values.
+• An array is a collection of different data types which are ordered and changeable(modifiable). 
+• An array allows storing duplicate elements and different data types. 
+• An array can be empty, or it may have different data type values.
 */
 
 console.log('------------------------------------------------------------------------------------------------------------------');
 
-//Create an array
+/* Create an array */
 
-console.log('create-an-array :\n');
-
-const arr1 = new Array(12, 13, 14, 44); // Using Array constructor
+/* using array constructor */
+const arr1 = new Array(12, 13, 14, 44); // [ 12, 13, 14, 44 ]
 console.log(arr1);
 
-const arr2 = [23, 33, 44, 54, 623]; // Using square brackets []
+/* using square brackets [] */
+const arr2 = [23, 33, 44, 54, 623]; // [ 23, 33, 44, 54, 623 ]
 console.log(arr2);
 
 console.log('------------------------------------------------------------------------------------------------------------------');
 
-//Array Properties
+/* Array Indexing */
 
-console.log('array-properties :\n');
-
-const webTechs = ['HTML', 'CSS', 'JS', 'React', 'Tailwind', 'NodeJS', 'MongDB']; // array of strings, web technologies
-const countries = ['India', 'Denmark', 'Sweden', 'Norway', 'Iceland']; // array of strings, countries
+const webTechs = ['HTML', 'CSS', 'JS', 'React', 'Tailwind', 'NodeJS', 'MongDB'];
+const countries = ['India', 'Denmark', 'Sweden', 'Norway', 'Iceland'];
 
 webTechs[webTechs.length - 1] = 'MySQL';
-console.log(webTechs);
-console.log(countries[0]);
+console.log(webTechs); // ['HTML', 'CSS', 'JS', 'React', 'Tailwind', 'NodeJS', 'MySQL']
+console.log(countries[0]); // India
 
 const mixedArray = ['Arijit', 22, 'India', true, { job: 'Developer', hobby: 'Gaming' }, [28, 05, 1999]];
-console.log(mixedArray);
-console.log(mixedArray[4].job);
-console.log(mixedArray[5][0]);
+console.log(mixedArray); // ['Arijit', 22, 'India', true, { job: 'Developer', hobby: 'Gaming' }, [28, 5, 1999]]
+console.log(mixedArray[4].job); // Developer
+console.log(mixedArray[5][0]); // 28
 
 console.log('------------------------------------------------------------------------------------------------------------------');
 
-// Array of arrays
+/* Array of arrays */
 
 const firstNums = [1, 2, 3];
 const secondNums = [1, 4, 9];
-
-const arrayOfArray = [
-  [1, 2, 3],
-  [1, 2, 3],
-];
-console.log(arrayOfArray[0]); // [1, 2, 3]
+const arrayOfArray = [firstNums, secondNums];
+console.log(arrayOfArray); // [ [ 1, 2, 3 ], [ 1, 4, 9 ] ]
+console.log(arrayOfArray[0]); // [ 1, 2, 3 ]
 
 const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux'];
 const backEnd = ['Node', 'Express', 'MongoDB'];
@@ -64,17 +58,22 @@ console.log(fullStack[1]); // ["Node", "Express", "MongoDB"]
 
 console.log('------------------------------------------------------------------------------------------------------------------');
 
-// Copy an array
-// a and b have their own references and are not equal
+/*
+• Array object memeory reference
+*/
 
-let a = [1, 2, 3, 4, 5];
+/* both a and b have same reference in memory */
+const a = [1, 2, 3, 4, 5];
+const b = a;
+b[0] = 'one';
+console.log(a); // [ 'one', 2, 3, 4, 5 ]
+console.log(b); // [ 'one', 2, 3, 4, 5 ]
 
-let b = a.map((e) => e); // more on map later...
-
-console.log(a, b);
-
-a.push(44);
-
-console.log(a, b);
+/* both c and d have different reference in memory */
+const c = [1, 2, 3, 4, 5];
+const d = [...c]; // deep copy by array destructuring
+d[0] = 'one';
+console.log(c); // [ 1, 2, 3, 4, 5 ]
+console.log(d); // [ 'one', 2, 3, 4, 5 ]
 
 console.log('------------------------------------------------------------------------------------------------------------------');

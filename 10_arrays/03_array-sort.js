@@ -1,12 +1,11 @@
 /*
 • Sorting an Array -- The sort() method sorts an array alphabetically.
-• Reversing an Array -- The reverse() method reverses the elements in an array.
 */
 
 /*
 • Numeric Sort
 • By default, the sort() function sorts values as strings.
-• This works well for strings ("Apple" comes before "Banana").
+• This works well for strings ("Apple" comes before "Banana" as 'A' comes before 'B').
 • However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
 • Because of this, the sort() method will produce incorrect result when sorting numbers.
 • You can fix this by providing a compare function:
