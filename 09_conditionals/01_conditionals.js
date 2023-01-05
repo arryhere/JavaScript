@@ -1,5 +1,5 @@
 /*
-• CONDITIONALS
+• JavaScript Conditionals
 • Conditional statements are used for make decisions based on different conditions.
 • By default , statements in JavaScript script executed sequentially from top to bottom
 • If the processing logic require so, the sequential flow of execution can be altered in two ways:
