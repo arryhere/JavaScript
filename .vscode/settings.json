@@ -1,7 +1,9 @@
 {
   "editor.tabSize": 2,
   "editor.renderWhitespace": "trailing",
-  "editor.rulers": [130],
+  "editor.rulers": [
+    130
+  ],
   "liveServer.settings.port": 5501,
   "[javascript]": {
     "editor.defaultFormatter": "rome.rome"
