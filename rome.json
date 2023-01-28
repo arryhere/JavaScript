@@ -1,0 +1,28 @@
+{
+  "files": {
+    "ignore": []
+  },
+  "formatter": {
+    "enabled": true,
+    "ignore": [],
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentSize": 2,
+    "lineWidth": 130
+  },
+  "linter": {
+    "enabled": false,
+    "ignore": [],
+    "rules": {
+      "recommended": true
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "quoteProperties": "asNeeded",
+      "trailingComma": "es5",
+      "semicolons": "always"
+    }
+  }
+}

@@ -3,5 +3,7 @@
   "editor.renderWhitespace": "trailing",
   "editor.rulers": [130],
   "liveServer.settings.port": 5501,
-  "prettier.printWidth": 130
+  "[javascript]": {
+    "editor.defaultFormatter": "rome.rome"
+  }
 }
