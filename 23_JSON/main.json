@@ -1,12 +1,16 @@
 {
-    "firstName": "Arijit",
-    "lastName": "Das",
-    "age": 22,
-    "isHuman": true,
-    "food": ["Top Ramen", "Frooti", "Cheese Sticks"],
-    "address": {
-        "country": "India",
-        "state": "West Bengal",
-        "city": "Kolkata"
-    }
+  "firstName": "Arijit",
+  "lastName": "Das",
+  "age": 22,
+  "isHuman": true,
+  "food": [
+    "Top Ramen",
+    "Frooti",
+    "Cheese Sticks"
+  ],
+  "address": {
+    "country": "India",
+    "state": "West Bengal",
+    "city": "Kolkata"
+  }
 }
