@@ -20,7 +20,6 @@
     undefined 
 */
 
-
 let json = JSON.parse(`{
     "firstName": "Arijit",
     "lastName": "Das",
@@ -32,61 +31,58 @@ let json = JSON.parse(`{
         "state": "West Bengal",
         "city": "Kolkata"
     }
-}`)
+}`);
 
 console.log(json);
-console.log(JSON.stringify(json, ["age", "food", "lastName"], 8));
+console.log(JSON.stringify(json, ['age', 'food', 'lastName'], 8));
 
-console.log(json["firstName"] + json["lastName"]);
-console.log(json["address"]);
-console.log(json["address"]["city"]);
-
+console.log(json['firstName'] + json['lastName']);
+console.log(json['address']);
+console.log(json['address']['city']);
 
 console.log('------------------------------------------------------------------------------------------------------------------');
-
 
 let jsonArr = `[
     {"firstName": "Arijit", "lastName": "Das"},
     {"age": 22, "gender": "male"},
     ["Inida", "West Bengal", "Kolkata"]
-]`
+]`;
 
 console.log(typeof jsonArr, jsonArr);
 
 console.log(JSON.parse(jsonArr));
 
-
 console.log('------------------------------------------------------------------------------------------------------------------');
 
-const usersText = `{
-    "users":[
-        {
-            "firstName":"Arijit",
-            "lastName":"Das",
-            "age":22,
-            "email":"arijit@sample.email"
-        },
-        {
-            "firstName":"Divya",
-            "lastName":"Jian",
-            "age":22,
-            "email":"divya@sample.email"
-        },
-        {
-            "firstName":"Vivek",
-            "lastName":"Bhansal",
-            "age":23,
-            "email":"vivek@sample.email"
-        }
-    ]
-}`
+const usersText = `
+{
+  "users":[
+    {
+      "firstName":"Arijit",
+      "lastName":"Das",
+      "age":22,
+      "email":"arijit@sample.email"
+    },
+    {
+      "firstName":"Divya",
+      "lastName":"Jian",
+      "age":22,
+      "email":"divya@sample.email"
+    },
+    {
+      "firstName":"Vivek",
+      "lastName":"Bhansal",
+      "age":23,
+      "email":"vivek@sample.email"
+    }
+  ]
+}`;
 
 const usersObj = JSON.parse(usersText, (key, value) => {
-    let newValue;
-    typeof value === 'string' && key !== 'email' ? newValue = value.toUpperCase() : newValue = value;
-    return newValue;
-})
-console.log(usersObj)
-
+  let newValue;
+  typeof value === 'string' && key !== 'email' ? (newValue = value.toUpperCase()) : (newValue = value);
+  return newValue;
+});
+console.log(usersObj);
 
 console.log('------------------------------------------------------------------------------------------------------------------');
