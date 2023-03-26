@@ -5,15 +5,23 @@
     140
   ],
   "editor.suggest.selectionMode": "always",
-  "workbench.editor.enablePreview": true,
   "explorer.autoReveal": false,
   "explorer.compactFolders": false,
   "terminal.integrated.scrollback": 100000000,
   "[javascript]": {
     "editor.defaultFormatter": "rome.rome"
   },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "rome.rome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "rome.rome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "rome.rome"
+  },
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8"
   },
-  "liveServer.settings.port": 5501,
+  "liveServer.settings.port": 5501
 }
