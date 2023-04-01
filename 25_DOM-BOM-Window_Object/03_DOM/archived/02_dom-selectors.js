@@ -16,7 +16,7 @@ console.log(document.getElementsByClassName("child"));
 console.log(document.querySelector(".child"));
 console.log(document.querySelectorAll(".child"));
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 let a = document.getElementById("main");
 console.log(a.children);
@@ -26,7 +26,7 @@ a.style.backgroundColor = 'cyan';
 document.getElementById("first").innerText = "My inner text";
 document.getElementById("first").innerHTML = "<i>My inner text</i>";
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 let b = document.getElementsByClassName("container")[0].getElementsByClassName("child");
 console.log(b);
@@ -36,4 +36,4 @@ Array.from(b).forEach((element) => {                                 //cannot us
     element.style.backgroundColor = "yellow"
 });
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');

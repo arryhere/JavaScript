@@ -1,13 +1,14 @@
 {
   "editor.tabSize": 2,
   "editor.renderWhitespace": "trailing",
-  "editor.rulers": [
-    140
-  ],
+  "editor.rulers": [140],
   "editor.suggest.selectionMode": "always",
   "explorer.autoReveal": false,
   "explorer.compactFolders": false,
   "terminal.integrated.scrollback": 100000000,
+  "[json]": {
+    "editor.defaultFormatter": "rome.rome"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "rome.rome"
   },

@@ -12,7 +12,7 @@ const squareNumbers = numbers.map((element, index, array) => {
 });
 console.log(numbers, squareNumbers);
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 const names = ['Arijit', 'Divya', 'Sunidhi', 'Ravi', 'Haris'];
 const namesUpper = names.map((e, i, arr) => {
@@ -22,7 +22,7 @@ const namesUpper = names.map((e, i, arr) => {
 
 console.log(names, namesUpper);
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 const languages = ['Java', 'Python', 'C', 'C++', 'Java Script', 'C#'];
 const cropLanguages = languages.map((e, i, arr) => {

@@ -24,7 +24,7 @@
 • delete property
 */
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // Array Constructor
 
@@ -36,7 +36,7 @@ console.log(arr1);
 const arr2 = new Array(10); // it creates ten empty values
 console.log(arr2);
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // Creating static values with fill
 
@@ -48,7 +48,7 @@ const arr4 = new Array(10).fill(420);
 console.log(arr3);
 console.log(arr4);
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // Concatenating array using concat
 // Returns a new array
@@ -61,7 +61,7 @@ const arr7 = arr6.concat(arr5, [44, 55, 66]);
 
 console.log(arr7);
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // Getting array length
 // length: To know the size of the array
@@ -71,7 +71,7 @@ console.log('length :\n');
 const arr8 = [1, 2, 3, 4, 5];
 console.log(arr8.length);
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // Getting index of an element in arr array
 // indexOf: To check if an item exist in an array. If it exists it returns the index else it returns -1.
@@ -83,7 +83,7 @@ console.log(arr9.indexOf(66));
 console.log(arr9.indexOf(true));
 console.log(arr9.indexOf('rahul')); // -1 , element does not exist in array
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // Getting last index of an element in array
 // lastIndexOf: It gives the position of the last item in the array. If it exist, it returns the index else it returns -1.
@@ -98,7 +98,7 @@ console.log(arr10.lastIndexOf(1)); // 6
 console.log(arr10.lastIndexOf(4)); // 3
 console.log(arr10.lastIndexOf(6)); // -1
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // includes
 // To check if an item exist in an array. If it exist it returns the true else it returns false.
@@ -110,7 +110,7 @@ console.log(arr11.includes(22));
 console.log(arr11.includes(2));
 console.log(arr11.includes(5));
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // Checking array
 // Array.isArray: To check if the data type is an array
@@ -120,7 +120,7 @@ console.log('checking-array :\n');
 const arr12 = [1, 2, 3, 4, 5];
 console.log(Array.isArray(arr12));
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // Converting array to string
 // toString:Converts array to string
@@ -130,7 +130,7 @@ console.log('toString :\n');
 const arr13 = ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node', 'MongoDB'];
 console.log(arr13.toString());
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // Joining array elements
 // join: It is used to join the elements of the array, the argument we passed in the join method will be joined in the array and return as a string.
@@ -145,7 +145,7 @@ console.log(arr14.join(' '));
 console.log(arr14.join(', '));
 console.log(arr14.join(' # '));
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // Slice array elements
 // slice: To cut out a multiple items in range. It takes two parameters: starting(inclusive) and ending position(exclusive).
@@ -161,7 +161,7 @@ console.log(arr15.slice(0, 0));
 
 console.log(arr15);
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // Splice method in array
 // splice: It takes three parameters:Starting position, number of times to be removed and number of items to be added.
@@ -176,7 +176,7 @@ console.log(arr16.splice(1, 1));
 
 console.log(arr16);
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // Push Pop
 // push: adding item in the end.
@@ -193,7 +193,7 @@ arr17.pop();
 
 console.log(arr17);
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // Removing an element from the beginning
 // shift: Removing one array element in the beginning of the array.
@@ -212,7 +212,7 @@ arr18.unshift(2);
 arr18.unshift(1);
 console.log(arr18);
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // Reversing array order
 // reverse: reverse the order of an array.
@@ -227,7 +227,7 @@ console.log(arr19); // [ 5, 4, 3, 2, 1 ]
 arr19.reverse();
 console.log(arr19); // [ 1, 2, 3, 4, 5 ]
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // Sorting elements in array
 // sort: arrange array elements in ascending order alphabetically
@@ -240,7 +240,7 @@ const arr20 = [1, false, 2, 3, 4, 'rahul', 5, 55, 7, 745, 9, 0, 10, true, 'ariji
 arr20.sort();
 console.log(arr20); // [0, 1, 10, 2, 3, 4, 5, 5, 7, 745, 9, 'arijit', false, 'rahul' true]
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // arr.flat([depth])
 // arr.flat() method was introduced in ES2019
@@ -254,7 +254,7 @@ console.log(arr21); // [ 1, [ 2, [ 3, [Array] ] ] ]
 arr21 = arr21.flat(Infinity);
 console.log(arr21); // [ 1, 2, 3, 4, 5 ]
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // Array.from()
 // make array from any objects : set, map, iterator
@@ -267,7 +267,7 @@ console.log(set); // Set(5) { 1, 2, 3, 4, 5 }
 let arr22 = Array.from(set);
 console.log(arr22); // [ 1, 2, 3, 4, 5 ]
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // delete property
 // The JavaScript delete operator removes a property from an object
@@ -281,4 +281,4 @@ console.log(arr23); // [ 1, 2, 3, 4, 5 ]
 delete arr23[0];
 console.log(arr23); // [ <1 empty item>, 2, 3, 4, 5 ]
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');

@@ -28,7 +28,7 @@ console.log(templateLiterals);
 let fullName = firstName + space + lastName; // concatenation, merging two string together.
 console.log(fullName);
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 /*
 • ESCAPE SEQUENCES IN STRINGS
@@ -55,7 +55,7 @@ console.log('In every programming language it starts with "Hello, World!"');
 console.log("In every programming language it starts with 'Hello, World!'");
 console.log("The saying 'Seeing is Believing' isn't correct in 2020");
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 /*
 • TEMPLATE LITERALS (TEMPLATE STRINGS)
@@ -74,4 +74,4 @@ let a = 2;
 let b = 3;
 console.log(`${a} is greater than ${b} : ${a > b}`);
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');

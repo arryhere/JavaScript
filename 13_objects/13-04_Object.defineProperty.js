@@ -20,7 +20,7 @@ console.log(person.id);
 person.id = 69;
 console.log(person.id);
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 /*
 • The Object.defineProperty() method can also be used to add Getters and Setters

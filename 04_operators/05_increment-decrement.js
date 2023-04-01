@@ -14,7 +14,7 @@ console.log(count2); // 1
 
 // We use post-increment most of the time. At least you should remember how to use post-increment operator.
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 // Decrement Operator
 // In JavaScript we use the decrement operator to decrease a value stored in a variable.

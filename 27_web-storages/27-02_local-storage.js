@@ -25,7 +25,7 @@ localStorage.setItem('employee', JSON.stringify(employee));
 
 console.log(localStorage);
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 console.log(localStorage.getItem('friends'));
 console.log(JSON.parse(localStorage.getItem('friends'))[0]);
@@ -33,14 +33,14 @@ console.log(JSON.parse(localStorage.getItem('friends'))[0]);
 console.log(localStorage.getItem('employee'));
 console.log(JSON.parse(localStorage.getItem('employee')).code);
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 console.log(localStorage.length);
 
 console.log(localStorage.key(0));
 console.log(localStorage.key(5));
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 localStorage.removeItem('friends');
 
@@ -48,7 +48,7 @@ console.log(localStorage);
 
 localStorage.clear();
 
-console.log('------------------------------------------------------------------------------------------------------------------');
+console.log('----------------------------------------------------------------------------------------------------------------------------');
 
 /*
 • session storage the same methods as local storage
