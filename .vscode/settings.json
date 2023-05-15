@@ -3,6 +3,10 @@
   "editor.renderWhitespace": "trailing",
   "editor.rulers": [140],
   "editor.suggest.selectionMode": "always",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.rome": true
+  },
+  "editor.formatOnSave": true,
   "explorer.autoReveal": false,
   "explorer.compactFolders": false,
   "terminal.integrated.scrollback": 100000000,
@@ -22,7 +26,12 @@
     "editor.defaultFormatter": "rome.rome"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.autopep8"
+    "editor.defaultFormatter": "ms-python.autopep8",
   },
-  "liveServer.settings.port": 5501
+  "rome.requireConfiguration": true,
+  "python.analysis.typeCheckingMode": "off",
+  "liveServer.settings.host": "127.0.0.1",
+  "liveServer.settings.port": 5501,
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": ""
 }
