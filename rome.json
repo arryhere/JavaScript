@@ -11,11 +11,15 @@
     "lineWidth": 140
   },
   "linter": {
-    "enabled": false,
+    "enabled": true,
     "ignore": [],
     "rules": {
       "recommended": true
     }
+  },
+  "organizeImports": {
+    "enabled": true,
+    "ignore": ["node_modules"]
   },
   "javascript": {
     "formatter": {

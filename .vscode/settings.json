@@ -1,7 +1,9 @@
 {
   "editor.tabSize": 2,
   "editor.renderWhitespace": "trailing",
-  "editor.rulers": [140],
+  "editor.rulers": [
+    140
+  ],
   "editor.suggest.selectionMode": "always",
   "editor.codeActionsOnSave": {
     "source.organizeImports.rome": true
@@ -26,7 +28,7 @@
     "editor.defaultFormatter": "rome.rome"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.defaultFormatter": "ms-python.autopep8"
   },
   "rome.requireConfiguration": true,
   "python.analysis.typeCheckingMode": "off",
